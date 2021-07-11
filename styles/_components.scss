@@ -475,19 +475,17 @@ $mob-header-button-size: 2.4em;
 
         [data-color-scheme="light"] &--light,
         [data-color-scheme="dark"] &--dark {
-            opacity: 0;
+            transform: translateY(-3em);
         }
 
         [data-color-scheme="light"] .anim-ok &--light,
         [data-color-scheme="dark"] .anim-ok &--dark {
-            opacity: 1;
             animation: raise-planet 400ms cubic-bezier(0.28, 0.84, 0.42, 1) 1
                 forwards;
         }
 
         [data-color-scheme="light"] .anim-ok &--dark,
         [data-color-scheme="dark"] .anim-ok &--light {
-            opacity: 1;
             animation: bounce-planet 700ms cubic-bezier(0.28, 0.84, 0.42, 1) 1
                 forwards;
         }

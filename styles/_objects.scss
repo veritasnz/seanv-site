@@ -230,19 +230,36 @@
 
 /* Misc
 ----------------------------------------------- */
-// .o-fade-in {
-//     opacity: 0;
-//     animation: fade-in 1s ease-in forwards;
+.o-fade-in {
+    opacity: 0;
+    animation: fade-in 1s ease-in forwards;
 
-//     @keyframes fade-in {
-//         from {
-//             opacity: 0;
-//         }
-//         to {
-//             opacity: 1;
-//         }
-//     }
-// }
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.o-drop-in {
+    transform: translateY(-200px);
+    opacity: 0;
+    animation: fade-in 0.45s linear forwards;
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(-200px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
 
 .o-break {
     width: 100%;

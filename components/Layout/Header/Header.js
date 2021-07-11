@@ -8,7 +8,7 @@ import LangButton from "./LangButton";
 
 function Header() {
     return (
-        <header className="header">
+        <header className="header o-drop-in">
             <SocialDropdown />
             <div className="header__options">
                 <LangButton />
