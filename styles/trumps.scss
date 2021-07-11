@@ -259,3 +259,30 @@ $hero-break-flex: 650px;
         }
     }
 }
+
+/* 404
+----------------------------------------------- */
+.t-404 {
+    &__subtitle {
+        line-height: 1.6;
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    &__bttn {
+        margin-top: 2em;
+        text-align: center;
+    }
+
+    br {
+        display: none;
+    }
+
+    @media (min-width: 550px) {
+        br {
+            display: block;
+        }
+    }
+}

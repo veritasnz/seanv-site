@@ -10,6 +10,11 @@
     "footer-text": "Let’s chat about working together!<0/>You can reach me here",
     "footer-copy": "Handcrafted by me",
 
+    "404-title": "404: Page not found",
+    "404-subtitle": "I looked everywhere for it, but the page you were searching for doesn't exist 😣",
+    "404-text": "Please double check the URL, navigate back to the page you were last on, or click the button below to go back to the homepage.",
+    "404-button": "Back to the homepage",
+
     "--- HOME TEXT ---": "----------------",
 
     "hero-title": "Hi, I’m Sean!",
@@ -37,7 +42,5 @@
     "works-title": "Selected Works",
     "posts-title": "Blog & Articles",
 
-    "view-all": "View All",
-
-    "--- SEO TEXT ---": "----------------"
+    "view-all": "View All"
 }
