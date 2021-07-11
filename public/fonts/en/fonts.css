@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Anonymous Pro';
+    src: local('Anonymous Pro Bold'), local('AnonymousPro-Bold'),
+        url('AnonymousPro-Bold.woff2') format('woff2'),
+        url('AnonymousPro-Bold.woff') format('woff'),
+        url('AnonymousPro-Bold.ttf') format('truetype'),
+        url('AnonymousPro-Bold.svg#AnonymousPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Anonymous Pro';
+    src: local('Anonymous Pro'), local('AnonymousPro'),
+        url('AnonymousPro.woff2') format('woff2'),
+        url('AnonymousPro.woff') format('woff'),
+        url('AnonymousPro.ttf') format('truetype'),
+        url('AnonymousPro.svg#AnonymousPro') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --ff-mono: "Anonymous Pro", monospace !important;
+}

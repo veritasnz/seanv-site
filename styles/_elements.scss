@@ -1,0 +1,96 @@
+:root {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+
+    font-family: var(--ff-mono);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-body);
+    text-transform: lowercase;
+
+    color: var(--text-body);
+    background: var(--bg-first);
+}
+
+a {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+        transition: all 150ms ease;
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+::selection {
+    color: var(--bg-first);
+    background: var(--blue-low);
+}
+
+input {
+    &[type="button"] {
+        cursor: pointer;
+    }
+}
+
+em {
+    font-style: normal;
+}
+
+img,
+svg,
+iframe {
+    display: block;
+    max-width: 100%;
+}
+
+img,
+svg {
+    height: auto;
+}
+
+button,
+select {
+    color: inherit;
+    text-transform: lowercase;
+}
+
+button {
+    cursor: pointer;
+}
+
+main {
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: var(--lh-title);
+    font-weight: var(--fw-bold);
+}
+
+h1,
+h2 {
+    color: var(--text-title);
+}
+
+h1 {
+    font-size: var(--fs-page-title);
+}
+
+h2 {
+    font-size: var(--fs-title);
+}
+
+p {
+    & + & {
+        margin-top: 1.25em;
+    }
+}

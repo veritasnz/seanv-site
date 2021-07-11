@@ -1,0 +1,17 @@
+# Folders
+.vscode/
+node_modules/
+
+
+#Files
+.eslintcache
+.DS_store
+
+.env
+.env.build
+
+# next.js build output
+.next
+
+#logs
+npm-debug.log*
