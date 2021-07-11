@@ -4,6 +4,7 @@ import Category from "./PostMeta/Category";
 
 export default function PostHead({ post, lang }) {
     const formatString = lang === "en" ? "LLLL do yyyy" : "yyyy-MM-dd";
+    const categorySuffix = lang === "en" ? "Category: " : "記事カテ：";
 
     /**
      * Read Duration
@@ -29,6 +30,8 @@ export default function PostHead({ post, lang }) {
                     <Category
                         slug={post.categorySlug}
                         name={post.categoryName}
+                        tooltip={categorySuffix + post.categoryName}
+                        noText={true}
                     />
                 </div>
                 <div className="post-head__text">

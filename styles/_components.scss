@@ -1546,9 +1546,9 @@ $mob-header-button-size: 2.4em;
             font-size: calc(var(--fs-large) * 3);
             margin-right: 0.6em;
 
-            span {
-                display: none;
-            }
+            // span {
+            //     display: none;
+            // }
         }
 
         &__read {
