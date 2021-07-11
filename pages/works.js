@@ -1,4 +1,5 @@
 import useTranslation from "next-translate/useTranslation";
+import { NextSeo } from "next-seo";
 
 import { REVALIDATION_DUR } from "../lib/constants";
 import { getWorksData } from "../lib/works-api";
@@ -10,16 +11,21 @@ import PageTransitionWrapper from "../components/Layout/PageTransitionWrapper";
 
 function WorksArchive(props) {
     const { t } = useTranslation("common");
+    const worksTitle = t("works-title");
 
-    const breadcrumbs = [{ name: t("works-title"), url: null }];
+    const breadcrumbs = [{ name: worksTitle, url: null }];
 
     return (
-        <PageTransitionWrapper>
-            <PageTitle title={t("works-title")} breadcrumbs={breadcrumbs} />
-            <Container type="second">
-                <WorksGrid works={props.works} />
-            </Container>
-        </PageTransitionWrapper>
+        <>
+            <NextSeo title={worksTitle} />
+
+            <PageTransitionWrapper>
+                <PageTitle title={worksTitle} breadcrumbs={breadcrumbs} />
+                <Container type="second">
+                    <WorksGrid works={props.works} />
+                </Container>
+            </PageTransitionWrapper>
+        </>
     );
 }
 

@@ -32,6 +32,7 @@ export default function SocialDropdown() {
                         className="social-dropdown__open"
                         onClick={toggleMenuHandler}
                         type="button"
+                        title="Open menu"
                     >
                         <Icon name="loudspeaker" color="currentColor" />
                     </button>

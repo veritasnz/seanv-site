@@ -475,7 +475,7 @@ $mob-header-button-size: 2.4em;
 
         [data-color-scheme="light"] &--light,
         [data-color-scheme="dark"] &--dark {
-            transform: translateY(-3em);
+            transform: translateY(-3em) !important;
         }
 
         [data-color-scheme="light"] .anim-ok &--light,

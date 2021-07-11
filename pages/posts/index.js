@@ -1,4 +1,5 @@
 import useTranslation from "next-translate/useTranslation";
+import { NextSeo } from "next-seo";
 
 import {
     FULL_POST_ITEM_MATTER_TYPES,
@@ -15,16 +16,21 @@ function PostsPage(props) {
     const { allPosts, allTerms } = props;
 
     const { t } = useTranslation("common");
+    const postsTitle = t("posts-title");
 
-    const breadcrumbs = [{ name: t("posts-title"), url: null }];
+    const breadcrumbs = [{ name: postsTitle, url: null }];
 
     return (
-        <PageTransitionWrapper>
-            <PageTitle title={t("posts-title")} breadcrumbs={breadcrumbs} />
-            <Container type="second">
-                <PostArchive allPosts={allPosts} allTerms={allTerms} />
-            </Container>
-        </PageTransitionWrapper>
+        <>
+            <NextSeo title={postsTitle} />
+
+            <PageTransitionWrapper>
+                <PageTitle title={postsTitle} breadcrumbs={breadcrumbs} />
+                <Container type="second">
+                    <PostArchive allPosts={allPosts} allTerms={allTerms} />
+                </Container>
+            </PageTransitionWrapper>
+        </>
     );
 }
 

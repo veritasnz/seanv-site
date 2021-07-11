@@ -5,11 +5,13 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import useTranslation from "next-translate/useTranslation";
 import { bundleMDX } from "mdx-bundler";
+import { NextSeo } from "next-seo";
 
 import {
     SHORT_POST_ITEM_MATTER_TYPES,
     POST_BODY_MATTER_TYPES,
     REVALIDATION_DUR,
+    SITE_URL,
 } from "../../lib/constants";
 
 import {
@@ -46,35 +48,55 @@ function PostPage({ post, morePosts }) {
     ];
 
     return (
-        <PageTransitionWrapper>
-            <Head>
-                <title>{post.title}</title>
-                <meta property="og:image" content={post.ogImage.url} />
-            </Head>
+        <>
+            <PageTransitionWrapper>
+                <NextSeo
+                    title={post.title}
+                    description={post.excerpt}
+                    openGraph={{
+                        images: [
+                            {
+                                url: SITE_URL + post.ogImage.url,
+                                width: post.ogImage.width || 1200,
+                                height: post.ogImage.height || 900,
+                                alt: post.title,
+                            },
+                        ],
+                        type: "article",
+                        article: {
+                            publishedTime: post.date,
+                            modifiedTime: post.modifiedDate,
+                            tags: [post.categoryName],
+                        },
+                    }}
+                />
 
-            <PageTitle title={post.title} breadcrumbs={breadcrumbs} />
+                <PageTitle title={post.title} breadcrumbs={breadcrumbs} />
 
-            <Container type="second" width="thin">
-                {router.isFallback ? (
-                    <div>Loading…</div>
-                ) : (
-                    <>
-                        <PostHead post={post} lang={lang} />
-                        <PostBody content={post.content} lang={lang} />
-                        <section className="more-posts">
-                            <WaveBreak />
-                            <h2 className="o-title">{t("post-more-articles")}</h2>
-                            <PostList posts={morePosts} isGrid />
-                            <div className="o-archive-bttn">
-                                <LinkButton color="orange" href="/posts/">
-                                    {t("post-all-articles")}
-                                </LinkButton>
-                            </div>
-                        </section>
-                    </>
-                )}
-            </Container>
-        </PageTransitionWrapper>
+                <Container type="second" width="thin">
+                    {router.isFallback ? (
+                        <div>Loading…</div>
+                    ) : (
+                        <>
+                            <PostHead post={post} lang={lang} />
+                            <PostBody content={post.content} lang={lang} />
+                            <section className="more-posts">
+                                <WaveBreak />
+                                <h2 className="o-title">
+                                    {t("post-more-articles")}
+                                </h2>
+                                <PostList posts={morePosts} isGrid />
+                                <div className="o-archive-bttn">
+                                    <LinkButton color="orange" href="/posts/">
+                                        {t("post-all-articles")}
+                                    </LinkButton>
+                                </div>
+                            </section>
+                        </>
+                    )}
+                </Container>
+            </PageTransitionWrapper>
+        </>
     );
 }
 

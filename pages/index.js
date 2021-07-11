@@ -15,17 +15,12 @@ import WorksGrid from "../components/Works/WorksGrid";
 import PostList from "../components/Posts/PostList";
 import Container from "../components/UI/Container";
 import LinkButton from "../components/UI/LinkButton";
-import { NextSeo } from "next-seo";
 
 function HomePage({ latestThreeWorks, latestTwoPosts }) {
     const { t } = useTranslation("common");
 
     return (
         <>
-            <NextSeo
-                title="Home"
-                description="A short description goes here."
-            />
             <PageTransitionWrapper>
                 <Hero />
                 <Container title={t("about-title")} type="second" isShortTitle>
