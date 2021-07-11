@@ -1,27 +1,23 @@
+import useTranslation from "next-translate/useTranslation";
+import Trans from "next-translate/Trans";
+
 import WaveBreak from "../UI/WaveBreak";
 import DateFormatter from "../UI/DateFormatter";
 import Category from "./PostMeta/Category";
 
-export default function PostHead({ post, lang }) {
+export default function PostHead({ post }) {
+    const { t, lang } = useTranslation("common");
+
     const formatString = lang === "en" ? "LLLL do yyyy" : "yyyy-MM-dd";
-    const categorySuffix = lang === "en" ? "Category: " : "記事カテ：";
 
-    /**
-     * Read Duration
-     */
-    let readDurationString = post.readDuration || null;
-    if (readDurationString) {
-        if (lang === "en") {
-            readDurationString = readDurationString + " minute read";
-        } else {
-            readDurationString =
-                "この記事を読むに" + readDurationString + "分くらいかかる";
-        }
-    }
+    const categoryTooltip =
+        t("post-cat-prefix", {
+            count: post.categoryName,
+        }) || false;
 
-    /**
-     * Post Date
-     */
+    const durationString = t("post-read-duration", {
+        count: post.readDuration,
+    });
 
     return (
         <header className="post-head">
@@ -30,30 +26,37 @@ export default function PostHead({ post, lang }) {
                     <Category
                         slug={post.categorySlug}
                         name={post.categoryName}
-                        tooltip={categorySuffix + post.categoryName}
+                        tooltip={categoryTooltip}
                         noText={true}
                     />
                 </div>
                 <div className="post-head__text">
-                    {readDurationString && (
-                        <p className="post-head__read">{readDurationString}</p>
+                    {durationString && (
+                        <p className="post-head__read">{durationString}</p>
                     )}
                     <p className="post-head__date">
-                        {lang === "en" ? "Published " : "掲載日："}
-                        <DateFormatter
-                            dateString={post.date}
-                            formatString={formatString}
-                        />
-                        {post.modifiedDate && (
-                            <>
-                                {lang === "en"
-                                    ? ", Last updated "
-                                    : "、　最終更新日："}
+                        <Trans
+                            i18nKey="common:post-published"
+                            components={[
                                 <DateFormatter
+                                    key="0"
                                     dateString={post.date}
                                     formatString={formatString}
-                                />
-                            </>
+                                />,
+                            ]}
+                        />
+
+                        {post.modifiedDate && (
+                            <Trans
+                                i18nKey="common:post-updated"
+                                components={[
+                                    <DateFormatter
+                                        key="0"
+                                        dateString={post.modifiedDate}
+                                        formatString={formatString}
+                                    />,
+                                ]}
+                            />
                         )}
                     </p>
                 </div>

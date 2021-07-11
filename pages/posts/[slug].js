@@ -78,7 +78,7 @@ function PostPage({ post, morePosts }) {
                         <div>Loading…</div>
                     ) : (
                         <>
-                            <PostHead post={post} lang={lang} />
+                            <PostHead post={post} />
                             <PostBody content={post.content} lang={lang} />
                             <section className="more-posts">
                                 <WaveBreak />

@@ -6,6 +6,11 @@
     "post-more-articles": "More Articles",
     "post-all-articles": "View All",
 
+    "post-cat-prefix": "Category: {{count}}",
+    "post-read-duration": "{{count}} minute read",
+    "post-published": "Published <0/>",
+    "post-updated": ", Last updated <0/>",
+
     "footer-image-alt": "A colorful blue and orange illustration of Vincent Van Gogh",
     "footer-text": "Let’s chat about working together!<0/>You can reach me here",
     "footer-copy": "Handcrafted by me",

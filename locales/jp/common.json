@@ -6,6 +6,11 @@
     "post-more-articles": "他の記事",
     "post-all-articles": "全部を見る",
 
+    "post-cat-prefix": "記事カテ：{{count}}",
+    "post-read-duration": "この記事を読むに{{count}}分くらいかかる",
+    "post-published": "掲載日：<0/>",
+    "post-updated": "、　最終更新日：<0/>",
+
     "footer-image-alt": "カラフルな左を向いているフィンセント・ファン・ゴッホのイラスト",
     "footer-text": "作りたいサイトやプロジェクトあれば、<0/>僕と相談しよう！",
     "footer-copy": "僕によって制作した",
