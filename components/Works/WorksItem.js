@@ -11,21 +11,24 @@ const createLink = ({ icon, url, tooltip }) => {
 
     if (isExternal) {
         return (
-            <a
-                className="icon-list__item"
-                key={icon}
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                {iconComponent}
-            </a>
+            <li className={"icon-list__item"}>
+                <a
+                    key={icon}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    {iconComponent}
+                </a>
+            </li>
         );
     } else {
         return (
-            <Link key={icon} href={url}>
-                <a className="icon-list__item">{iconComponent}</a>
-            </Link>
+            <li className={"icon-list__item"}>
+                <Link key={icon} href={url}>
+                    <a>{iconComponent}</a>
+                </Link>
+            </li>
         );
     }
 };

@@ -12,6 +12,7 @@ export default function SocialLinks(props) {
                     href="https://www.linkedin.com/in/sean-verity/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Linked In"
                 >
                     <Icon
                         name="linkedin"
@@ -25,6 +26,7 @@ export default function SocialLinks(props) {
                     href="https://twitter.com/veritas_nz"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Twitter"
                 >
                     <Icon
                         name="twitter"
@@ -38,6 +40,7 @@ export default function SocialLinks(props) {
                     href="https://github.com/veritasnz"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Github"
                 >
                     <Icon
                         name="github"
@@ -47,7 +50,7 @@ export default function SocialLinks(props) {
                 </a>
             </li>
             <li>
-                <Obfuscate email="seanv@hotmail.co.nz">
+                <Obfuscate email="seanv@hotmail.co.nz" aria-label="Email">
                     <Icon
                         name="contact"
                         tooltip={hasTooltip ? "Email" : false}

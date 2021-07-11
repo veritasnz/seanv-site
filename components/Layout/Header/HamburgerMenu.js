@@ -24,6 +24,7 @@ function HamburgerMenu() {
                     className="menu__ham"
                     type="button"
                     onClick={toggleMenuHandler}
+                    title="Open menu"
                 >
                     <div className="hamburger" aria-hidden="true">
                         <div className="hamburger__box">

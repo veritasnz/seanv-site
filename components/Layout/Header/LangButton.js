@@ -8,15 +8,17 @@ export default function LangButton(props) {
 
     let oppositeLocale = "jp";
     let oppositeIconName = "nihongo";
+    let title = "Switch to Japanese";
 
     if (router.locale == "jp") {
         oppositeLocale = "en";
         oppositeIconName = "english";
+        title = "英語に切り替える";
     }
 
     return (
         <Link href={router.asPath} locale={oppositeLocale}>
-            <a className="lang-button">
+            <a className="lang-button" title={title}>
                 <Icon name={oppositeIconName} />
             </a>
         </Link>

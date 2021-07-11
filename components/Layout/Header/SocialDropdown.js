@@ -32,7 +32,7 @@ export default function SocialDropdown() {
                         className="social-dropdown__open"
                         onClick={toggleMenuHandler}
                         type="button"
-                        title="Open menu"
+                        title="Open drawer"
                     >
                         <Icon name="loudspeaker" color="currentColor" />
                     </button>
@@ -46,6 +46,7 @@ export default function SocialDropdown() {
                             className="social-dropdown__close"
                             onClick={closeMenuHandler}
                             type="button"
+                            title="Close drawer"
                         >
                             <Icon name="chevronup" color="currentColor" />
                         </button>

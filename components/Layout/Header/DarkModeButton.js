@@ -49,6 +49,7 @@ export default function DarkModeButton(props) {
                 className="darkmode__bttn darkmode__bttn--dark"
                 type="button"
                 onClick={darkModeHandler}
+                title="Dark Mode"
             >
                 <MoonSVG bg="var(--blue-low)" />
             </button>
@@ -56,6 +57,7 @@ export default function DarkModeButton(props) {
                 className="darkmode__bttn darkmode__bttn--light"
                 type="button"
                 onClick={lightModeHandler}
+                title="Light Mode"
             >
                 <SunSVG bg="var(--orange-med)" />
             </button>
