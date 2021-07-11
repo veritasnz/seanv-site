@@ -35,24 +35,24 @@ function MyApp({ Component, pageProps, router }) {
             url: "seanv.dev",
             site_name: seoSite,
             images: [
-                // {
-                //     url: `${SITE_URL}/img/seo/og-${locale}-light.png`,
-                //     width: 1200,
-                //     height: 630,
-                //     alt: seoSite,
-                // },
-                // {
-                //     url: `${SITE_URL}/img/seo/og-${locale}-dark.png`,
-                //     width: 1200,
-                //     height: 630,
-                //     alt: seoSite,
-                // },
-                // {
-                //     url: `${SITE_URL}/img/seo/og-${locale}-thick.png`,
-                //     width: 710,
-                //     height: 542,
-                //     alt: seoSite,
-                // },
+                {
+                    url: `${SITE_URL}/img/seo/og-${locale}-light.png`,
+                    width: 1200,
+                    height: 630,
+                    alt: seoSite,
+                },
+                {
+                    url: `${SITE_URL}/img/seo/og-${locale}-dark.png`,
+                    width: 1200,
+                    height: 630,
+                    alt: seoSite,
+                },
+                {
+                    url: `${SITE_URL}/img/seo/og-${locale}-thick.png`,
+                    width: 710,
+                    height: 542,
+                    alt: seoSite,
+                },
             ],
         },
         twitter: {

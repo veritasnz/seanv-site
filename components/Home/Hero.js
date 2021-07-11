@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import useTranslation from "next-translate/useTranslation";
 import LinkButton from "../UI/LinkButton";
+import Obfuscate from "react-obfuscate";
 
 import HeroImage from "../../svg/vincent-hero.svg";
 import Hill from "../UI/Animations/Hill";
@@ -21,12 +22,12 @@ export default function Hero(props) {
                     <p>{t("hero-intro")}</p>
                     <p>{t("hero-cta")}</p>
                     <div className="t-hero__bttnbox">
-                        <LinkButton href="#" color="blue">
+                        <Obfuscate className="o-bttn o-bttn--blue" email="seanv@hotmail.co.nz">
                             {t("hero-contact-button")}
-                        </LinkButton>
-                        <LinkButton href="#">
+                        </Obfuscate>
+                        {/* <LinkButton href="#">
                             {t("hero-resume-button")}
-                        </LinkButton>
+                        </LinkButton> */}
                     </div>
                 </div>
             </div>
