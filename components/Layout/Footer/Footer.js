@@ -34,7 +34,7 @@ function Footer() {
                     </p>
                     <SocialLinks className="footer__social" />
                     <p className="footer__copy">
-                        {`${t("footer-copy")} || ©︎ ${currentYear}`}
+                        {`${t("footer-copy")} ©︎ ${currentYear}`}
                     </p>
                 </div>
 

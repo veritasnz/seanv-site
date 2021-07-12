@@ -66,6 +66,10 @@ button {
 
 main {
     position: relative;
+
+    &.jp {
+        text-transform: none;
+    }
 }
 
 h1,

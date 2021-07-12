@@ -12,7 +12,7 @@
     "post-updated": ", Last updated <0/>",
 
     "footer-image-alt": "A colorful blue and orange illustration of Vincent Van Gogh",
-    "footer-text": "Let’s chat about working together!<0/>Reach me through any of the below links",
+    "footer-text": "Want to discuss your project? Here’s how to reach me:",
     "footer-copy": "Handcrafted by me",
 
     "404-title": "404: Page not found",
@@ -31,8 +31,6 @@
 
     "about-title": "More about me",
     "about-asl": "27/M/Kiwi",
-    "about-intro": "I’m a kiwi web developer currently living in Himeji, Japan.<0/> Originally from Auckland, I graduated from the University of Auckland with a bachelors degree in computer science. A wee while after that I moved to Japan for an OE and taught English. I ended up loving it so much that I decided to stay a bit longer. After studying Japanese super hard and becoming proficient, I began my career as a front end developer at a Japanese tech company. With numerous personal and client projects under my belt, I now look forward to what’s next",
-
     "about-typewriter-base": "I'm ",
     "about-typewriter-content": [
         { "text": "a web developer" },
@@ -44,6 +42,7 @@
         { "text": "a drinker of tap water" },
         { "text": "currently addicted to Halo 3" }
     ],
+    "about-intro": "I’m a kiwi web developer based in Himeji, Japan. <0/> After graduating from the University of Auckland with a bachelors degree in computer science, I moved to Japan to teach English. I ended up loving it so much that I decided to stay a bit longer. After attaining business-level Japanese, I began my career as a front end developer at a local tech company. Now, with numerous personal and client projects under my belt, I’m looking forward to what’s next",
 
     "about-use-title": "Tech I use",
     "about-study-title": "Tech I’m learning",

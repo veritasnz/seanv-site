@@ -9,7 +9,7 @@ const works = [
         type: "個人プロジェクト - アプリ",
         stack: ["react", "redux", "javascript"],
         summary:
-            "生産性を上げるためのインタラクティブな循環的に回るタイマーアプリ。時間循環からボイスまで、全面的に設定の編集が可能。ユーザーの設定は訪問のたびに記憶される",
+            "作業の効率性を上げるためのタイマーアプリ。時間サイクルから音声案内の声の種類まで、全体的に設定可能。その設定は、訪問の度に記憶される。",
         links: [
             {
                 icon: "github",
@@ -23,13 +23,13 @@ const works = [
      * Kurage Digital Site
      */
     {
-        name: "クラゲディジタルＨＰ",
+        name: "クラゲデジタルＨＰ",
         url: "https://kuragedigital.com/",
         thumbnailURL: "/img/works/kurage-digital.png",
         type: "顧客依頼 - デザイン&開発",
         stack: ["wordpress", "sass", "javascript", "php"],
         summary:
-            "クラゲディジタルはWordpressのサイト制作を専門する エージェンシーです。会社のホームページのデザインと開発を依頼された",
+            "クラゲデジタルはWordpressのサイト制作を専門とするエージェンシーです。この会社ＨＰのデザインと開発を担当",
         links: [],
     },
 
@@ -37,13 +37,13 @@ const works = [
      * Various Client Sites
      */
     {
-        name: "色々な依頼されたサイト",
+        name: "今までの依頼集",
         url: "/posts/client-sites",
         thumbnailURL: "/img/works/client-sites.png",
         type: "顧客依頼 - 開発",
         stack: ["wordpress", "sass", "javascript", "php"],
         summary:
-            "Wordpressと特注のテーマで作った、様々な依頼されたサイト集。記事でその詳細が読める",
+            "Wordpressと特注のテーマで作った、様々な依頼されたサイト集。記事でその詳細の確認が出来る",
         links: [
             {
                 icon: "article",
@@ -63,7 +63,7 @@ const works = [
         type: "個人プロジェクト",
         stack: ["wordpress", "sass", "javascript", "php"],
         summary:
-            "自分なりのWPテーマ制作するためのテーマテンプレート。よく使うプラグインやライブラリを対応しているテンプレートの使用では、スムーズに手早くテーマ制作が始めれる",
+            "自分なりのWPテーマ制作をするためのテーマテンプレート。よく使うプラグインやライブラリーを対応しているテンプレートの使用では、スムーズに手早くテーマ制作が始めれる",
         links: [
             {
                 icon: "github",

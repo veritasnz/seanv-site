@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import useTranslation from "next-translate/useTranslation";
-import LinkButton from "../UI/LinkButton";
+import Trans from "next-translate/Trans";
 import Obfuscate from "react-obfuscate";
 
 import HeroImage from "../../svg/vincent-hero.svg";
@@ -19,10 +19,23 @@ export default function Hero(props) {
                 />
                 <div className="t-hero__txtbox">
                     <h1>{t("hero-title")}</h1>
-                    <p>{t("hero-intro")}</p>
-                    <p>{t("hero-cta")}</p>
+                    <p>
+                        <Trans
+                            i18nKey="common:hero-intro"
+                            components={[<br key="0" />]}
+                        />
+                    </p>
+                    <p>
+                        <Trans
+                            i18nKey="common:hero-cta"
+                            components={[<br key="0" />]}
+                        />
+                    </p>
                     <div className="t-hero__bttnbox">
-                        <Obfuscate className="o-bttn o-bttn--blue" email="seanv@hotmail.co.nz">
+                        <Obfuscate
+                            className="o-bttn o-bttn--blue"
+                            email="seanv@hotmail.co.nz"
+                        >
                             {t("hero-contact-button")}
                         </Obfuscate>
                         {/* <LinkButton href="#">
