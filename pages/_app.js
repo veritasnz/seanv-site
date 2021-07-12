@@ -41,18 +41,6 @@ function MyApp({ Component, pageProps, router }) {
                     height: 630,
                     alt: seoSite,
                 },
-                {
-                    url: `${SITE_URL}/img/seo/og-${locale}-dark.png`,
-                    width: 1200,
-                    height: 630,
-                    alt: seoSite,
-                },
-                {
-                    url: `${SITE_URL}/img/seo/og-${locale}-thick.png`,
-                    width: 710,
-                    height: 542,
-                    alt: seoSite,
-                },
             ],
         },
         twitter: {

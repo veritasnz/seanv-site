@@ -16,6 +16,8 @@ export default function AboutTypewriter() {
     });
 
     const typewriterOptions = {
+        delay: 90, // speed up insertion
+        deleteSpeed: 40, // speed up deletion
         strings: stringsToType,
         autoStart: true,
         loop: true,

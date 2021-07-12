@@ -12,7 +12,7 @@
     "post-updated": ", Last updated <0/>",
 
     "footer-image-alt": "A colorful blue and orange illustration of Vincent Van Gogh",
-    "footer-text": "Let’s chat about working together!<0/>You can reach me here",
+    "footer-text": "Let’s chat about working together!<0/>Reach me through any of the below links",
     "footer-copy": "Handcrafted by me",
 
     "404-title": "404: Page not found",
@@ -24,25 +24,29 @@
 
     "hero-title": "Hi, I’m Sean!",
     "hero-alt": "A colorful blue and orange illustration of Vincent Van Gogh",
-    "hero-intro": "I create experiences through the sites and apps I create. You can Check out what I’ve been up to through my works and blog posts.",
+    "hero-intro": "I create experiences through the sites and apps I create. Check out what I’ve been up to through my works and blog posts",
     "hero-cta": "Got a website or project in mind? Let’s work together!",
     "hero-contact-button": "Get in touch",
     "hero-resume-button": "my_resume.pdf",
 
     "about-title": "More about me",
     "about-asl": "27/M/Kiwi",
-    "about-intro": "I’m a kiwi currently living in Himeji, Japan.<0/> Originally from Auckland, Graduating from the University of Auckland with a bachelors In computer science. A wee while after that I moved to Japan for an OE and taught English, I ended up loving it so much that I decided to stay a bit longer. After studying Japanese super hard and becoming proficient, there I began my dev career in front end at a Japanese tech company. With numerous personal and client projects under my belt, I now look forward to what’s next!",
+    "about-intro": "I’m a kiwi web developer currently living in Himeji, Japan.<0/> Originally from Auckland, I graduated from the University of Auckland with a bachelors degree in computer science. A wee while after that I moved to Japan for an OE and taught English. I ended up loving it so much that I decided to stay a bit longer. After studying Japanese super hard and becoming proficient, I began my career as a front end developer at a Japanese tech company. With numerous personal and client projects under my belt, I now look forward to what’s next",
 
-    "about-typewriter-base": "I'm a ",
+    "about-typewriter-base": "I'm ",
     "about-typewriter-content": [
-        { "text": "JS developer" },
-        { "text": "poopy butthole" },
-        { "text": "smelly boy" },
-        { "text": "crayon user" }
+        { "text": "a web developer" },
+        { "text": "into Helvetica" },
+        { "text": "good at making car noises" },
+        { "text": "the worst cook you could imagine" },
+        { "text": "pretty good at making porridge though" },
+        { "text": "thinking of what I should write next" },
+        { "text": "a drinker of tap water" },
+        { "text": "currently addicted to Halo 3" }
     ],
 
     "about-use-title": "Tech I use",
-    "about-study-title": "Tech I’m studying",
+    "about-study-title": "Tech I’m learning",
 
     "works-title": "Selected Works",
     "posts-title": "Blog & Articles",

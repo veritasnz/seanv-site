@@ -609,6 +609,14 @@ $mob-header-button-size: 2.4em;
         color: var(--text-title);
     }
 
+    @media (max-width: 400px) {
+        &__text {
+            br {
+                display: none;
+            }
+        }
+    }
+
     @media (min-width: 500px) {
         &__sp-hills {
             margin-top: -8rem;

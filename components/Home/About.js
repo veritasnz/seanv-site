@@ -29,13 +29,12 @@ export default function About(props) {
                     <IconList
                         isStack
                         icons={[
-                            "javascript",
-                            "typescript",
                             "react",
-                            "redux",
                             "nextjs",
                             "wordpress",
                             "sass",
+                            "typescript",
+                            "redux",
                         ]}
                     />
                 </div>
