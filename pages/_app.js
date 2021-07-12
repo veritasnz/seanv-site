@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps, router }) {
             site_name: seoSite,
             images: [
                 {
-                    url: `${SITE_URL}/img/seo/og-${locale}-light.png`,
+                    url: `${SITE_URL}/img/og-${locale}.png`,
                     width: 1200,
                     height: 630,
                     alt: seoSite,
@@ -63,7 +63,7 @@ function MyApp({ Component, pageProps, router }) {
 
             <Header />
 
-            <main>
+            <main className={isEnglish ? "en" : "jp"}>
                 <Clouds count="3" yOffset="-2vw" />
                 <Clouds count="2" yOffset="-2vw" />
 
