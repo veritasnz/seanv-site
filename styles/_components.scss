@@ -1197,6 +1197,10 @@ $mob-header-button-size: 2.4em;
         text-align: center;
         background: var(--bg-second);
 
+        [data-color-scheme="dark"] .o-container--second & {
+            background: var(--bg-first);
+        }
+
         opacity: 0;
         pointer-events: none;
         transition: opacity 400ms ease;

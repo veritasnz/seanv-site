@@ -9,6 +9,7 @@ import Javascript from "../../../svg/icons/javascript.svg";
 import MongoDB from "../../../svg/icons/mongodb.svg";
 import NextJS from "../../../svg/icons/nextjs.svg";
 import NodeJS from "../../../svg/icons/nodejs.svg";
+import PHP from "../../../svg/icons/php.svg";
 import ReactJS from "../../../svg/icons/react.svg";
 import Redux from "../../../svg/icons/redux.svg";
 import Sass from "../../../svg/icons/sass.svg";
@@ -55,6 +56,10 @@ export default function StackIcon(props) {
         nodejs: {
             component: <NodeJS {...iconProps} />,
             defaultTooltip: "NodeJS",
+        },
+        php: {
+            component: <PHP {...iconProps} />,
+            defaultTooltip: "PHP",
         },
         react: {
             component: <ReactJS {...iconProps} />,
