@@ -6,10 +6,10 @@ const works = [
         name: "_Devclock",
         url: "https://devclock.kuragedigital.com/",
         thumbnailURL: "/img/works/devclock.png",
-        type: "Personal Project",
-        stack: ["javascript", "redux", "react"],
+        type: "Personal Project - App",
+        stack: ["react", "redux", "javascript"],
         summary:
-            "A interactive cycle-based countdown timer that works in cycles. Fully configurable cycle & voice settings, which are stored between visits. ",
+            "A interactive pomodoro-style countdown timer app that works in cycles, with fully configurable cycle & voice settings, which are stored between visits.",
         links: [
             {
                 icon: "github",
@@ -18,6 +18,7 @@ const works = [
             },
         ],
     },
+
     /**
      * Kurage Digital Site
      */
@@ -25,28 +26,49 @@ const works = [
         name: "Kurage Digital Site",
         url: "https://kuragedigital.com/",
         thumbnailURL: "/img/works/kurage-digital.png",
-        type: "Client Work - Design & Development",
-        stack: ["wordpress", "javascript", "sass"],
+        type: "Client Work - Complete design & development",
+        stack: ["wordpress", "sass", "javascript", "php"],
         summary:
-            "Kurage Digital is a small boutique agency specialising in making corporate websites using bespoke Wordpress themes. I personally designed and coded their website",
+            "Kurage Digital is a boutique agency specialising in corporate website production with Wordpress.",
         links: [],
     },
+
     /**
      * Various Client Sites
      */
     {
         name: "Various Client Sites",
-        url: null,
+        url: "/posts/client-sites",
         thumbnailURL: "/img/works/client-sites.png",
         type: "Client Work - Development",
-        stack: ["wordpress", "javascript", "sass"],
+        stack: ["wordpress", "sass", "javascript", "php"],
         summary:
-            "Various client sites created using Wordpress for the CMS and bespoke PHP-based themes.",
+            "Various client sites created using Wordpress CMS and bespoke PHP-based themes for the front end. Read the article for details.",
         links: [
             {
                 icon: "article",
-                url: "/posts/hello-world",
+                url: "/posts/client-sites",
                 tooltip: "Read the article",
+            },
+        ],
+    },
+
+    /**
+     * WP Boilerplate
+     */
+    {
+        name: "Wordpress Boilerplate",
+        url: null,
+        thumbnailURL: "/img/works/boilerplate.png",
+        type: "Personal Project",
+        stack: ["wordpress", "sass", "javascript", "php"],
+        summary:
+            "My boilerplate for creating WP themes. Gets me straight into theme production quickly and smoothly, supporting all my heavily used plugins and libraries.",
+        links: [
+            {
+                icon: "github",
+                url: "https://github.com/veritasnz/wp-boilerplate",
+                tooltip: "See the code",
             },
         ],
     },
