@@ -4,7 +4,7 @@ const works = [
      */
     {
         name: "_Devclock",
-        url: "https://devclock.kuragedigital.com/",
+        url: "https://devclock.seanv.dev/",
         thumbnailURL: "/img/works/devclock.png",
         type: "個人プロジェクト - アプリ",
         stack: ["react", "redux", "javascript"],
