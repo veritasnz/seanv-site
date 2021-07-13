@@ -17,6 +17,8 @@ import Japanese from "../../../svg/icons/japanese.svg";
 import LinkedIn from "../../../svg/icons/linkedin.svg";
 import Loudspeaker from "../../../svg/icons/loudspeaker.svg";
 import Nihongo from "../../../svg/icons/nihongo.svg";
+import Other from "../../../svg/icons/other.svg";
+import Personal from "../../../svg/icons/personal.svg";
 import Twitter from "../../../svg/icons/twitter.svg";
 
 export default function Icon(props) {
@@ -50,6 +52,8 @@ export default function Icon(props) {
         linkedin: <LinkedIn {...iconProps} />,
         loudspeaker: <Loudspeaker {...iconProps} />,
         nihongo: <Nihongo {...iconProps} />,
+        other: <Other {...iconProps} />,
+        personal: <Personal {...iconProps} />,
         twitter: <Twitter {...iconProps} />,
     };
 
