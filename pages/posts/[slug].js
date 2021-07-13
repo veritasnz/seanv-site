@@ -80,18 +80,23 @@ function PostPage({ post, morePosts }) {
                         <>
                             <PostHead post={post} />
                             <PostBody content={post.content} lang={lang} />
-                            <section className="more-posts">
-                                <WaveBreak />
-                                <h2 className="o-title">
-                                    {t("post-more-articles")}
-                                </h2>
-                                <PostList posts={morePosts} isGrid />
-                                <div className="o-archive-bttn">
-                                    <LinkButton color="orange" href="/posts/">
-                                        {t("post-all-articles")}
-                                    </LinkButton>
-                                </div>
-                            </section>
+                            {morePosts.length > 0 && (
+                                <section className="more-posts">
+                                    <WaveBreak />
+                                    <h2 className="o-title">
+                                        {t("post-more-articles")}
+                                    </h2>
+                                    <PostList posts={morePosts} isGrid />
+                                    <div className="o-archive-bttn">
+                                        <LinkButton
+                                            color="orange"
+                                            href="/posts/"
+                                        >
+                                            {t("post-all-articles")}
+                                        </LinkButton>
+                                    </div>
+                                </section>
+                            )}
                         </>
                     )}
                 </Container>
