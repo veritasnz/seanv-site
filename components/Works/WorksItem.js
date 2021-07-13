@@ -46,16 +46,25 @@ export default function WorksItem(props) {
     let titleContents = name;
 
     if (url) {
-        titleContents = (
-            <a
-                href={url}
-                className="o-link"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                {name}
-            </a>
-        );
+        // weak external link check
+        if (url.includes("http")) {
+            titleContents = (
+                <a
+                    href={url}
+                    className="o-link"
+                    target="_blank"
+                    rel="noopener sponsored"
+                >
+                    {name}
+                </a>
+            );
+        } else {
+            titleContents = (
+                <Link href={url}>
+                    <a className="o-link">{name}</a>
+                </Link>
+            );
+        }
     }
 
     /**
