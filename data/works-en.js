@@ -38,7 +38,7 @@ const works = [
      */
     {
         name: "Various Client Sites",
-        url: "/posts/client-sites",
+        url: "/posts/various-client-sites",
         thumbnailURL: "/img/works/client-sites.png",
         type: "Client Work - Development",
         stack: ["wordpress", "sass", "javascript", "php"],
