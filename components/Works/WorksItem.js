@@ -12,7 +12,7 @@ const createLink = ({ icon, url, tooltip }) => {
     if (isExternal) {
         return (
             <li className={"icon-list__item"} key={icon}>
-                <a href={url} target="_blank" rel="noopener noreferrer">
+                <a href={url} target="_blank" rel="noreferrer noopener">
                     {iconComponent}
                 </a>
             </li>
@@ -53,7 +53,7 @@ export default function WorksItem(props) {
                     href={url}
                     className="o-link"
                     target="_blank"
-                    rel="noopener sponsored"
+                    rel="noopener noreferrer sponsored"
                 >
                     {name}
                 </a>

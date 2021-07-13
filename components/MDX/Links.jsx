@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function ATag(props) {
     const { href, children } = props;
     const isExternal = href.includes("http"); // weak external link check
