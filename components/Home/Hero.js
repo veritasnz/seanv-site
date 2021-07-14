@@ -35,6 +35,7 @@ export default function Hero(props) {
                         <Obfuscate
                             className="o-bttn o-bttn--blue"
                             email="seanv@hotmail.co.nz"
+                            obfuscateChildren={false}
                         >
                             {t("hero-contact-button")}
                         </Obfuscate>
