@@ -11,13 +11,11 @@ function getAnchorID(text) {
         .replace(/[^a-z0-9 ]/g, "")
         .replace(/[ ]/g, "-");
 
-    if(idSlug.trim() !== "") {
-        // Valid id slug (English)
-        return idSlug;
-    } else {
-        // Invalid id slug (Japanese)
-        return text;
+    if (idSlug.trim() !== "") {
+        return idSlug; // Valid id slug (English)
     }
+
+    return text; // Invalid id slug (Japanese)
 }
 
 function getLink(link) {

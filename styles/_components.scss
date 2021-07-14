@@ -698,6 +698,11 @@ $mob-header-button-size: 2.4em;
 
     &__title {
         max-width: 11em;
+
+        main.jp & {
+            max-width: 14em;
+        }
+
         margin-left: auto;
         margin-right: auto;
         font-size: 2.4rem;
