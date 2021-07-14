@@ -5,7 +5,8 @@
     // max-width: 65ch;
 
     strong {
-        font-weight: 600;
+        font-weight: var(--fw-bold);
+        color: var(--text-title);
     }
 
     ol {
