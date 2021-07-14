@@ -6,10 +6,18 @@
 import Icon from "../UI/Icons/Icon";
 
 function getAnchorID(text) {
-    return text
+    let idSlug = text
         .toLowerCase()
         .replace(/[^a-z0-9 ]/g, "")
         .replace(/[ ]/g, "-");
+
+    if(idSlug.trim() !== "") {
+        // Valid id slug (English)
+        return idSlug;
+    } else {
+        // Invalid id slug (Japanese)
+        return text;
+    }
 }
 
 function getLink(link) {
