@@ -7,7 +7,9 @@ import shadesOfPurple from "prism-react-renderer/themes/shadesOfPurple";
 require("prismjs/components/prism-php"); // Add PHP support
 
 export default function Code(props) {
-    const { children: exampleCode, lang = "jsx" } = props;
+    const { children, lang = "jsx" } = props;
+
+    const exampleCode = children.trim();
 
     return (
         <Highlight
@@ -19,9 +21,9 @@ export default function Code(props) {
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
                 <pre className={className} style={style}>
                     {tokens.map((line, i) => (
-                        <div key={i} {...getLineProps({ line, key: i })}>
+                        <div {...getLineProps({ line, key: i })}>
                             {line.map((token, key) => (
-                                <span key={key} {...getTokenProps({ token, key })} />
+                                <span {...getTokenProps({ token, key })} />
                             ))}
                         </div>
                     ))}
