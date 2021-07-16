@@ -35,20 +35,22 @@ import Code from "./Code";
 
 コードはこちら：
 
-<Code lang="php">{`function wpcf7_validation_function($result, $tag) {
+<Code lang="php" children={
+`function wpcf7_validation_function($result, $tag) {
     // WPCF7フォームから入力した最初の値をとって、$valueにいれる
     $value = str_replace(array(PHP_EOL, ' '), '', esc_attr($_POST['your-name']));
-${``}
+
     if (!empty($value)) { // $valueが空でなければ
         if (!preg_match("/^[ぁ-んァ-ヶ一-龠々+ー+]+$/u", $value)) { // 名前の文字が全て日本語じゃなければ…
             $result['valid'] = false;  // 名前が無効だとWPCF7に教える変数
             $result['reason'] = array('your-name' => 'お名前は日本語で入力してください'); // ユーザーエラーメッセージを表示する。このメッセージを変えてもオッケー！
         }
     }
-${``}
+
     return $result;
 }
-add_filter('wpcf7_validate', 'wpcf7_validation_function', 10, 2);`}</Code>
+add_filter('wpcf7_validate', 'wpcf7_validation_function', 10, 2);
+`} />
 
 ### wpcf7_spam（バックエンド）
 
@@ -59,24 +61,27 @@ add_filter('wpcf7_validate', 'wpcf7_validation_function', 10, 2);`}</Code>
 
 コードはこちら：
 
-<Code lang="php">{`add_filter('wpcf7_spam', function ($spam) {
+<Code lang="php" children={
+`add_filter('wpcf7_spam', function ($spam) {
     if ($spam) { return $spam; } // 他のフィルターによって、$spamはすでに「true」となっている場合があるから、ここではtrueならそのままreturnする
-${``}
+
     $value = $_POST['your-name']; // フィールドの値を$valueに
     if (!empty($value)) { // $valueが空でなければ
         if (!preg_match("/^[ぁ-んァ-ヶ一-龠々+ー+]+$/u", $value)) { // 名前の文字が全て日本語じゃなければ…
             $spam = true; // スパムだ！！
         }
     }
-${``}
+
     return $spam;
-}, 10, 1);`}</Code>
+}, 10, 1);
+`} />
 
 $spam が「true」の場合、そのお問い合わせはWPCF7によってスパムと判断され、あなたとユーザーにメールは送信されないです。これで完成！
 
 ### コードまとめ
 
-<Code lang="php">{`function wpcf7_validation_function($result, $tag) {
+<Code lang="php" children={
+`function wpcf7_validation_function($result, $tag) {
     $value = str_replace(array(PHP_EOL, ' '), '', esc_attr($_POST['your-name']));
     if (!empty($value)) {
         if (!preg_match("/^[ぁ-んァ-ヶ一-龠々+ー+]+$/u", $value)) {
@@ -87,7 +92,7 @@ $spam が「true」の場合、そのお問い合わせはWPCF7によってス�
     return $result;
 }
 add_filter('wpcf7_validate', 'wpcf7_validation_function', 10, 2);
-${``}
+
 add_filter('wpcf7_spam', function ($spam) {
     if ($spam) { return $spam; }
     $value = $_POST['your-name'];
@@ -97,7 +102,8 @@ add_filter('wpcf7_spam', function ($spam) {
         }
     }
     return $spam;
-}, 10, 1);`}</Code>
+}, 10, 1);
+`} />
 
 ### 注目点
 スパムと判定された場合、WPCF7と同じメーカーが作った関連しているWPCF7用のプラグイン「Flamingo」によってそのお問い合わせはを「スパム」として保存されます。なのでFlamingoをインストールして受信したスパムを追跡しよう！
