@@ -866,7 +866,7 @@ $mob-header-button-size: 2.4em;
     height: min(14vw, 12rem);
     overflow: hidden;
 
-    & + & {
+    main > & + .clouds {
         top: min(16vw, 16rem) !important;
     }
 }

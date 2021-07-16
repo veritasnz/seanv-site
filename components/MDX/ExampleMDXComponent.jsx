@@ -1,22 +1,19 @@
 export * from "react";
 
-// import s from "./ExampleMDXComponent.module.css";
-
 import Clouds from "../UI/Animations/Clouds";
 import Hill from "../UI/Animations/Hill";
 
 function ExampleMDXComponent() {
     return (
-        <div className="example">
-            <div className="example__clouds">
-                <Clouds count="2" />
-                <Clouds count="2" />
+        <div className="t-example-mdx">
+            <div className="t-example-mdx__clouds">
+                <Clouds count="3" yOffset="4rem" />
+                <Clouds count="3" yOffset="10rem" />
             </div>
-            <div className="example__hills">
-                <Hill height={180} color="blue" />
-                <Hill height={110} color="orange" />
+            <div className="t-example-mdx__hills">
+                <Hill height={60} color="blue" />
+                <Hill height={30} color="orange" />
             </div>
-            <div className="example__ground"></div>
         </div>
     );
 }

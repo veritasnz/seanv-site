@@ -286,3 +286,41 @@ $hero-break-flex: 650px;
         }
     }
 }
+
+/* Example MDX Component 
+----------------------------------------------- */
+.t-example-mdx {
+    position: relative;
+    z-index: 5;
+    width: 30rem;
+    height: 18rem;
+    max-width: 100%;
+    margin: 5rem auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 2rem;
+    background: var(--bg-first);
+}
+
+.t-example-mdx__clouds {
+    .clouds {
+        height: 4rem;      
+    }
+
+    .cloud__cloud {
+        height: 2rem;
+    }
+}
+
+.t-example-mdx__hills {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 6rem;
+
+    .hill:last-child {
+        transform: translateY(calc(var(--hill-width) * 0.15));
+        margin-left: calc(var(--hill-width) * -0.15);
+    }
+}
