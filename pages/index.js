@@ -50,7 +50,7 @@ function HomePage({ latestThreeWorks, latestTwoPosts }) {
 export default HomePage;
 
 export async function getStaticProps(context) {
-    const { locale, req } = context;
+    const { locale } = context;
 
     const allPosts = getAllPosts(FULL_POST_ITEM_MATTER_TYPES, locale);
     const latestTwoPosts = allPosts.slice(0, 2);
