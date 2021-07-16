@@ -44,7 +44,7 @@ export default function DarkModeButton(props) {
     };
 
     return (
-        <div ref={parentRef} className="darkmode">
+        <div ref={parentRef} className="darkmode o-drop-in">
             <button
                 className="darkmode__bttn darkmode__bttn--dark"
                 type="button"

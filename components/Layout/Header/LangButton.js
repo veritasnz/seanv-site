@@ -18,7 +18,7 @@ export default function LangButton(props) {
 
     return (
         <Link href={router.asPath} locale={oppositeLocale}>
-            <a className="lang-button" title={title}>
+            <a className="lang-button o-drop-in" title={title}>
                 <Icon name={oppositeIconName} />
             </a>
         </Link>
