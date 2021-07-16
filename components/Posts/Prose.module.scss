@@ -9,6 +9,10 @@
         color: var(--text-title);
     }
 
+    em {
+        font-style: italic;
+    }
+
     ol {
         list-style: none;
 
@@ -282,7 +286,7 @@
             font-size: 0.875em;
             line-height: 1.4285714;
             margin-top: 0.8571429em;
-            text-align: center;
+            // text-align: right;
         }
     }
 
