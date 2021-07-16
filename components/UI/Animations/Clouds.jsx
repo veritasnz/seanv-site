@@ -8,5 +8,9 @@ export default function Clouds({ count, yOffset = 0 }) {
         cloudArray.push(<Cloud key={i} reversed={isReversed} />);
     }
 
-    return <div className="clouds" style={{top: yOffset}}>{cloudArray}</div>;
+    return (
+        <div className="clouds" style={{ top: yOffset }}>
+            {cloudArray}
+        </div>
+    );
 }
