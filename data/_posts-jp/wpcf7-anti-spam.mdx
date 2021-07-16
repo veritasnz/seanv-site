@@ -10,11 +10,9 @@ ogImage:
     url: "/img/posts/jp/wpcf7-anti-spam/cover.png"
     width: 1320
     height: 991
-imports:
-    - "../../components/MDX/Code.jsx"
 ---
 
-import Code from "../components/MDX/Code";
+import Code from "./Code";
 
 この課題を扱った多くの記事では、Contact Form 7 (WPCF7) で日本語以外の入力を阻止するため、バリデーション（wpcf7_validate）と Regex（正規表現）によっての実装方法が紹介されます。
 バリデーション（wpcf7_validate）**だけ**では、もちろん人間のユーザーが日本語以外のテキストを入力するのを防ぐことはできる**が**、ロボットやクローラーを防ぐことは**できないです**。

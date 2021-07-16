@@ -1,6 +1,5 @@
 import fs from "fs";
 import { join } from "path";
-import Head from "next/head";
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import useTranslation from "next-translate/useTranslation";
@@ -130,7 +129,10 @@ export async function getStaticProps({ params, locale }) {
         }, {});
     }
 
-    const result = await bundleMDX(post.content, { files: files });
+    const result = await bundleMDX(post.content, {
+        files: files,
+        cwd: process.cwd() + "/Components/MDX/",
+    });
     const { code: content } = result;
 
     /**
