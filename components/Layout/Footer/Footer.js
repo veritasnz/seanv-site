@@ -8,7 +8,7 @@ import Hill from "../../UI/Animations/Hill";
 import SocialLinks from "../SocialLinks";
 
 function Footer() {
-    const { t, lang } = useTranslation("common");
+    const { t } = useTranslation("common");
 
     const currentYear = new Date().getFullYear();
 

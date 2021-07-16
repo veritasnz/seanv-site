@@ -5,7 +5,7 @@ import AboutTypewriter from "./AboutTypewriter";
 import IconList from "../UI/Icons/IconList";
 
 export default function About(props) {
-    const { t, lang } = useTranslation("common");
+    const { t } = useTranslation("common");
 
     return (
         <>
