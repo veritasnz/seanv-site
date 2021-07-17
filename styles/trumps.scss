@@ -302,6 +302,7 @@ $hero-break-flex: 650px;
     justify-content: flex-end;
     border-radius: 2rem;
     background: var(--bg-first);
+    overflow: hidden;
 }
 
 .t-example-mdx__clouds {
