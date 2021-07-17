@@ -124,7 +124,7 @@ Once setup, code snippets only require being wrapped with the **&lt;Code&gt;** c
 
 **Pro Tip:** Place your code inside backticks and inside the _children_ prop of your **&lt;Code&gt;** component. Placing the snippet directly inside the component will cause your MDX parser to have a tantrum.
 
-## i18n (Internationalisation)
+## I18n
 
 If you click on the '日本語' button in the header menu, the language will change to Japanese. The multilingual aspect of this site was surprisingly one of the easier features to implement.
 Once you set up your different locales (in my case _/en/_ for English and _/jp/_ for Japanese) and your default locale inside `next.config.js`, all routing and redirects are handled automatically by NextJS. In each component you can access the current locale either through the `router` object passed to you by the `useRouter()` hook, or for your server-rendered content, through the `context` argument provided to you by `getStaticProps()`.
