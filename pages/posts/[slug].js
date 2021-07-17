@@ -152,7 +152,7 @@ export async function getStaticProps({ params, locale }) {
     };
 }
 
-export async function getStaticPaths({ locales }) {
+export async function getStaticPaths() {
     const enPosts = getAllPosts(["slug"], "en");
     const jpPosts = getAllPosts(["slug"], "jp");
 
