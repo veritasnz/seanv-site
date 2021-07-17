@@ -129,10 +129,7 @@ export async function getStaticProps({ params, locale }) {
         }, {});
     }
 
-    const result = await bundleMDX(post.content, {
-        files: files,
-        cwd: process.cwd() + "/Components/MDX/",
-    });
+    const result = await bundleMDX(post.content, { files: files });
     const { code: content } = result;
 
     /**
