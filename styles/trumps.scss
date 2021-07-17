@@ -4,6 +4,7 @@ $hero-break-button: 540px;
 $hero-break-flex: 650px;
 
 .t-hero {
+    padding-top: 2rem;
     padding-left: var(--edge-padding);
     padding-right: var(--edge-padding);
 
@@ -97,7 +98,7 @@ $hero-break-flex: 650px;
 /* Hero Hills
 ----------------------------------------------- */
 .t-hero-hills {
-    margin-top: -6rem;
+    margin-top: -3rem;
 
     position: relative;
     z-index: 2;
@@ -146,6 +147,10 @@ $hero-break-flex: 650px;
                 transform: translateY(calc(var(--hill-width) * 0.15));
             }
         }
+    }
+
+    @media (min-width: 480px) {
+        // margin-top: -4rem;
     }
 
     @media (min-width: $hero-break-flex) {
