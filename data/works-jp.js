@@ -47,7 +47,7 @@ const works = [
         links: [
             {
                 icon: "article",
-                url: "/posts/client-sites",
+                url: "/posts/various-client-sites",
                 tooltip: "記事を読む",
             },
         ],
