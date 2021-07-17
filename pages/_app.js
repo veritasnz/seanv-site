@@ -5,6 +5,7 @@ import { DefaultSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { AnimatePresence } from "framer-motion";
 
+import * as gtag from "../lib/gtag";
 import { SITE_URL } from "../lib/constants";
 
 import "../styles/style.global.scss";
