@@ -1,4 +1,5 @@
 const nextTranslate = require("next-translate");
+
 const { withPlaiceholder } = require("@plaiceholder/next");
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
@@ -16,4 +17,3 @@ module.exports = withPlaiceholder(
         })
     )
 );
-

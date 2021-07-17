@@ -194,10 +194,10 @@
 
 .o-anchor-heading {
     position: relative;
-    display: flex;
-    align-items: center;
 
     a {
+        display: inline-block;
+        flex-shrink: 0;
         font-size: 0.7em;
     }
 
@@ -214,6 +214,9 @@
     }
 
     @media (hover: hover) {
+        display: flex;
+        align-items: center;
+
         a {
             position: absolute;
             right: calc(100% + 0.5em);

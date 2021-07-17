@@ -221,7 +221,11 @@
                 content: none;
             }
         }
-    }
+
+        @media (max-width: 600px) {
+            font-size: 0.7em;
+        }
+    } // pre
 
     table {
         width: 100%;
