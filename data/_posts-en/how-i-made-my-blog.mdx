@@ -24,7 +24,7 @@ Quick links:
 
 ## The design phase
 
-Originally I had a totally different idea of how the site was going to look. I would have a vectorised Japanese ukiyo-e painting serving as the key hero image, and animate all the different features of the painting. The foreground and background would shift with a parallax effect, clouds and boats would drift by, smoke would rise out from the village in the background and so on.
+Originally, I had a totally different idea of how the site was going to look. I would have a vectorised Japanese ukiyo-e painting serving as the key hero image, and animate all the different features of the painting. The foreground and background would shift with a parallax effect, clouds and boats would drift by, smoke would rise out from the village in the background and so on.
 
 <figure>
     <img
@@ -32,14 +32,14 @@ Originally I had a totally different idea of how the site was going to look. I w
         alt="A colorful Ukiyo-e painting of Hakone, with a side navigation bar and the title 'Sean Veritas'"
     />
     <figcaption>
-        My orignal site design feat vectorised image of one of Hiroshige's
+        My original site design feat vectorised image of one of Hiroshige's
         paintings of Hakone. Note the old color scheme for Vincent Van Gogh
     </figcaption>
 </figure>
 
-While it was neat idea, and the vector image was already prepared, I knew it would take an age to code, and it might not necessarily turn out the way I wanted.
+While it was a neat idea, and the vector image was already prepared, I knew it would take an age to code, and it might not necessarily turn out the way I wanted.
 I scrapped it entirely for my site's current design. The current design is simpler, cartoony, 'dev'-y, expressive, and **impactful**, while simultaneously requiring a lot less time to implement. Overall, I'm happy with it.
-I used a Adobe XD for laying out the site and prototyping, and built the assets (icons, Vincent Van Gogh portrait etc.) in Adobe Illustrator.
+I used Adobe XD for laying out the site and prototyping, and built the assets (icons, Vincent Van Gogh portrait etc.) in Adobe Illustrator.
 
 ## My experience using NextJS vs Wordpress
 
@@ -49,7 +49,7 @@ But seeing as before learning React I was a Wordpress dev, I had to weigh up whe
 Switching to creating a blog using NextJS involved re-learning a lot of concepts when it comes to blog creation. For example, I had to build **_everything_** from scratch. Wordpress has all the basic blog features from the get-go. Categories, tags, thumbnails, querying for getting articles, accessing post meta-data, adding custom fields and so on. All of this functionality had to implemented _manually_ in a NextJS blog.
 
 However, at the risk of things being implemented incorrectly, it _does_ allow for much greater freedom.
-It also just feels a lot more _scaleable_ using React's component/prop way of doing things. Creating a component-based site in Wordpress just feels kind of _wrong_ once you get used to doing it in React. Templating techniques such as using `get_template_parts` with `$args` just feels second class in Wordpress compared to how it's managed in React.
+It also just feels a lot more _scalable_ using React's component/prop way of doing things. Creating a component-based site in Wordpress just feels kind of _wrong_ once you get used to doing it in React. Templating techniques such as using `get_template_parts` with `$args` just feels second class in Wordpress compared to how it's managed in React.
 
 What's also huge is when you compare the end site's user experience.
 Having the whole NextJS site as a single application with page transitions feels so much better than an Apache Wordpress site ever could.
@@ -59,12 +59,12 @@ So yeah, once I have put together a solid NextJS boilerplate/template (one where
 ### Why NextJS over Gatsby?
 
 Gatsby probably _is_ the logical choice for a site like this, it has countless base themes and plugins to help fast-track the creation process.
-Plus considering that all my post data is static, there is no _need_ for _any_ SSR. I _could've_ used Gatsby.
+Plus, considering that all my post data is static, there is no _need_ for _any_ SSR. I _could've_ used Gatsby.
 
 So why did I choose NextJS?
 
-It's powerful! It's just as well supported and maintained as Gatsby, and most importantly it gives the **_option_** for incorporating server-side rendering further down the line.
-I'll definitely be using NextJS in future, more complex projects (one's where using NextJS is warranted), so I thought I might as well dive straight into NextJS from the very beginning.
+It's powerful! It's just as well-supported and maintained as Gatsby, and most importantly it gives the **_option_** for incorporating server-side rendering further down the line.
+I'll definitely be using NextJS in the future, more complex projects (one's where using NextJS is warranted), so I thought I might as well dive straight into NextJS from the very beginning.
 
 ## MDX for writing & storing articles
 
@@ -76,16 +76,16 @@ Probably down the line I'll use a headless CMS for client projects, but not just
 
 ### Enter MDX
 
-I needed something simple, and initially looked into using _Markdown_ files (MD for short – a way of writing and storing mixed text/media content) to write and store posts. I am the only one involved in creating and updating blog posts, and they were'nt going to be particularly media-rich posts, so I thought MD files would do just fine.
+I needed something simple, and initially looked into using _Markdown_ files (MD for short – a way of writing and storing mixed text/media content) to write and store posts. I am the only one involved in creating and updating blog posts, and they weren't going to be particularly media-rich posts, so I thought MD files would do just fine.
 
 The official NextJS team provides a wonderful [demo blog repository](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) that uses Markdown files for the post content. I used this as the main base for my project, and built off of it.
 
- Through Josh Comeau's [blog post](https://www.joshwcomeau.com/blog/how-i-built-my-blog/), I stumbled upon MDX (Markdown with JSX support – allowing articles to have embedded React components). I definitely wanted this functionality in my site. The primary thing I'd be able to use MDX for was to to include code snippets with _syntax highlighting_ into my blog posts.
+ Through Josh Comeau's [blog post](https://www.joshwcomeau.com/blog/how-i-built-my-blog/), I stumbled upon MDX (Markdown with JSX support – allowing articles to have embedded React components). I definitely wanted this functionality in my site. The primary thing I'd be able to use MDX for was to include code snippets with _syntax highlighting_ into my blog posts.
 
 Once I chose to switch from vanilla Markdown to MDX, I had to update my file parser to support the new `.mdx` files.
-There were a few options for parsers, but I ended up opting for [mdx-bundler](https://github.com/kentcdodds/mdx-bundler). It allows you to parse the MDX file inside of `getStaticProps`, and then pass the parsed content to the React component inside your page where it is rendered.
+There were a few options for parsers, but I ended up opting for [mdx-bundler](https://github.com/kentcdodds/mdx-bundler). It allows you to parse the MDX file inside `getStaticProps`, and then pass the parsed content to the React component inside your page where it is rendered.
 
-The parser also allows you to overwrite the default HTML spat out by parsing process, so you can specify the replacing of certain elements with your own custom components.
+The parser also allows you to overwrite the default HTML spat out by the parsing process, so you can specify the replacing of certain elements with your own custom components.
 I do this with my HTML headings, where the default conversion process of my titles into `<h2>` and `<h3>` tags is intervened, and they are automatically replaced with my own custom heading components, which display anchor links beside the title text (in my code, this magic happens [here](https://github.com/veritasnz/seanv-site/blob/main/components/Posts/PostBody.js)).
 
 <Code children={`
@@ -126,7 +126,7 @@ Once setup, code snippets only require being wrapped with the **&lt;Code&gt;** c
 
 ## i18n (Internationalisation)
 
-If you click on the '日本語' button in header menu, the language will change to Japanese. The multilingual aspect of this site was surprisingly one of the easier features to implement.
+If you click on the '日本語' button in the header menu, the language will change to Japanese. The multilingual aspect of this site was surprisingly one of the easier features to implement.
 Once you set up your different locales (in my case _/en/_ for English and _/jp/_ for Japanese) and your default locale inside `next.config.js`, all routing and redirects are handled automatically by NextJS. In each component you can access the current locale either through the `router` object passed to you by the `useRouter()` hook, or for your server-rendered content, through the `context` argument provided to you by `getStaticProps()`.
 
 Initially I was thinking of implementing my own translation-text-grabbing mechanism for storing and getting translations between locales, just by using default i18n functionality. However I found a library called [next-translate](https://github.com/vinissimus/next-translate), and with its `useTranslation()` hook for getting text, and its `<Trans>` component for dynamically inserting HTML into said text, it had everything I needed to get my site set up.
@@ -191,7 +191,7 @@ I then wrapped all my child page's content in a custom **&lt;PageTransitionWrapp
 
 Once I had it working perfectly in my development environment, I built it locally and tested. Tragedy struck. Once you clicked on a link to a different page, the transition animation would start as normal, but all the styles for the components on the previous page would be lost, leaving the previous page an ugly mess as it faded from view...
 
-I'm guessing the NextJS build step over-optimised the SASS Modules that I had been using for styling my app up until then. It must have been discarded the previous page's styles at the start of the transition. Either way apparently it is a known (and unfixed) bug.
+I'm guessing the NextJS build step over-optimised the SASS Modules that I had been using for styling my app up until then. It must have been discarded the previous page's styles at the start of the transition. Either way, apparently it is a known (and unfixed) bug.
 
 Regardless of why it happened, it answers a question you may have had if you looked at my source code.
 
@@ -201,19 +201,19 @@ Before encountering the page-transition bug, I had been coding this app with SAS
 
 Using a single global stylesheet would fix the bug, but I would lose some performance benefits from lazy-loading styles, classname minification, and also the safety of locally-scoped styles.
 
-Completely refactoring my app to work with a single global SASS stylesheet was painful. But, it's a tiny site, and I was already efficent at coding safe and maintainable stylesheets, so sacrificing the drawbacks for slick page transitions ultimately felt worth it.
+Completely refactoring my app to work with a single global SASS stylesheet was painful. But, it's a tiny site, and I was already efficient at coding safe and maintainable stylesheets, so sacrificing the drawbacks for slick page transitions ultimately felt worth it.
 
 ## What's next / feature wishlist
 
 I could definitely spend a lot of time perfecting this site, adding features into infinity and beyond.
-But for now here's what's on the to-do list for the site:
+But for now, here's what's on the to-do list for the site:
 
 Features :
 
 -   RSS feed
--   Code some dummy one-off 'sandbox' pages that show design concepts and artstyles
+-   Code some dummy one-off 'sandbox' pages that show design concepts and art styles
 -   Ability to filter works by type (personal vs client)
--   Make the Hero Vincent Van Gogh's eyes follow the users cursor on hover
+-   Make the Hero Vincent Van Gogh's eyes follow the user's cursor on hover
 -   Get CSS modules working with MDX (hard)
 
 Things I should actually probably get around to :
