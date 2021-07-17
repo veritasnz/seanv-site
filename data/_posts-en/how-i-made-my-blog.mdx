@@ -3,7 +3,7 @@ title: "How I made my blog with NextJS i18n and MDX"
 categoryName: "Code"
 categorySlug: "code"
 excerpt: "Learn how I made this site with NextJS, the tools used and the pain-points encountered along the way. Hear about how I implemented i18n with NextJS routing, and how I used MDX to allow a dev-centric writing experience that allows JSX"
-readDuration: "##########"
+readDuration: "10~15"
 date: "2021-07-16"
 # modifiedDate: "2021-03-20"
 ogImage:
@@ -24,9 +24,7 @@ Quick links:
 
 ## The design phase
 
-I had a lot of choices to make for features to either snuff out or include. I got started on the design while simultaneously thinking about what tech I would use, and what was viable or not given the scope of the project.
-
-Originally I had a totally different idea to how the site was going to look. I would have a vectorised Japanese ukiyo-e painting serving as the key hero image, and animate all the different features of the painting would. The foreground and background would shift with a parallax effect, clouds and boats would drift by, smoke would rise out from a village in the background etc.
+Originally I had a totally different idea of how the site was going to look. I would have a vectorised Japanese ukiyo-e painting serving as the key hero image, and animate all the different features of the painting. The foreground and background would shift with a parallax effect, clouds and boats would drift by, smoke would rise out from the village in the background and so on.
 
 <figure>
     <img
@@ -46,17 +44,17 @@ I used a Adobe XD for laying out the site and prototyping, and built the assets 
 ## My experience using NextJS vs Wordpress
 
 I'm aware something like NextJS and Wordpress can't **_really_** be compared (for example, you can build a blog with a NextJS frontend **_and_** the Wordpress REST API). One is purely front-end, and one is a CMS coupled with PHP server-side rendering.
-**_But_** seeing as before learning React I was a Wordpress dev, I had to weigh up whether using NextJS over Wordpress was a good choice for me and the site.
+But seeing as before learning React I was a Wordpress dev, I had to weigh up whether using NextJS over Wordpress was a good choice for me and the site.
 
-Switching to creating a blog using NextJS involved re-learning a lot of concepts when it comes to blog creation. For example, I had to build **_everything_** from scratch. Wordpress hands all the basic blog features to you on a silver platter. Categories, tags, thumbnails and querying for getting articles. Accessing post meta-data and adding custom fields and so on. All of this functionality had to implemented _manually_ in a NextJS blog.
+Switching to creating a blog using NextJS involved re-learning a lot of concepts when it comes to blog creation. For example, I had to build **_everything_** from scratch. Wordpress has all the basic blog features from the get-go. Categories, tags, thumbnails, querying for getting articles, accessing post meta-data, adding custom fields and so on. All of this functionality had to implemented _manually_ in a NextJS blog.
 
-However, at the risk things being implemented incorrectly, it _does_ allow for much greater freedom.
+However, at the risk of things being implemented incorrectly, it _does_ allow for much greater freedom.
 It also just feels a lot more _scaleable_ using React's component/prop way of doing things. Creating a component-based site in Wordpress just feels kind of _wrong_ once you get used to doing it in React. Templating techniques such as using `get_template_parts` with `$args` just feels second class in Wordpress compared to how it's managed in React.
 
 What's also huge is when you compare the end site's user experience.
-Having the whole NextJS site as a single application with page transitions feels so much better than an Apache Wordpress site every could.
+Having the whole NextJS site as a single application with page transitions feels so much better than an Apache Wordpress site ever could.
 
-So yeah, once I have put together a solid NextJS boilerplate/template (one where I can scaffold entire sites in NextJS as fast as I can with [my Wordpress theme boilerplate](https://github.com/veritasnz/wp-boilerplate)) then we'll really be cooking.
+So yeah, once I have put together a solid NextJS boilerplate/template (one where I can scaffold entire sites in NextJS as fast as I can with [my Wordpress theme boilerplate](https://github.com/veritasnz/wp-boilerplate)), then we'll really be cooking.
 
 ### Why NextJS over Gatsby?
 
@@ -66,7 +64,7 @@ Plus considering that all my post data is static, there is no _need_ for _any_ S
 So why did I choose NextJS?
 
 It's powerful! It's just as well supported and maintained as Gatsby, and most importantly it gives the **_option_** for incorporating server-side rendering further down the line.
-I'll definitely be using NextJS in future, more complex projects (one's where using NextJS is warranted), so I thought I might as well dive straight into NextJS from the very beginning of my React career.
+I'll definitely be using NextJS in future, more complex projects (one's where using NextJS is warranted), so I thought I might as well dive straight into NextJS from the very beginning.
 
 ## MDX for writing & storing articles
 
@@ -82,13 +80,13 @@ I needed something simple, and initially looked into using _Markdown_ files (MD 
 
 The official NextJS team provides a wonderful [demo blog repository](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) that uses Markdown files for the post content. I used this as the main base for my project, and built off of it.
 
-I stumbled upon a thing called MDX (Markdown with JSX support – allowing articles to have embedded React components) through Josh Comeau's [blog post](https://www.joshwcomeau.com/blog/how-i-built-my-blog/), I knew I had to incorporate this into my site. The primary thing I'd be able to use MDX for was to to include code snippets with _syntax highlighting_ into my blog posts.
+ Through Josh Comeau's [blog post](https://www.joshwcomeau.com/blog/how-i-built-my-blog/), I stumbled upon MDX (Markdown with JSX support – allowing articles to have embedded React components). I definitely wanted this functionality in my site. The primary thing I'd be able to use MDX for was to to include code snippets with _syntax highlighting_ into my blog posts.
 
 Once I chose to switch from vanilla Markdown to MDX, I had to update my file parser to support the new `.mdx` files.
 There were a few options for parsers, but I ended up opting for [mdx-bundler](https://github.com/kentcdodds/mdx-bundler). It allows you to parse the MDX file inside of `getStaticProps`, and then pass the parsed content to the React component inside your page where it is rendered.
 
 The parser also allows you to overwrite the default HTML spat out by parsing process, so you can specify the replacing of certain elements with your own custom components.
-I do this with my HTML headings, where the conversion of my titles into `<h1>` and `<h2>` tags are automatically replaced with my own custom heading components, which display anchor links beside the title text (in my code, this magic happens [here](https://github.com/veritasnz/seanv-site/blob/main/components/Posts/PostBody.js)).
+I do this with my HTML headings, where the default conversion process of my titles into `<h2>` and `<h3>` tags is intervened, and they are automatically replaced with my own custom heading components, which display anchor links beside the title text (in my code, this magic happens [here](https://github.com/veritasnz/seanv-site/blob/main/components/Posts/PostBody.js)).
 
 <Code children={`
 // The title if it were converted normally
@@ -133,7 +131,7 @@ Once you set up your different locales (in my case _/en/_ for English and _/jp/_
 
 Initially I was thinking of implementing my own translation-text-grabbing mechanism for storing and getting translations between locales, just by using default i18n functionality. However I found a library called [next-translate](https://github.com/vinissimus/next-translate), and with its `useTranslation()` hook for getting text, and its `<Trans>` component for dynamically inserting HTML into said text, it had everything I needed to get my site set up.
 
-Through this library you set and create your namespaces _JSON_ files and the corresponding pages that they should be loaded by, and then through their custom `useTranslation()` hook you can retrieve the translations per namespace as needed. The placement of files and details of how to set up the `i18n.json` settings file can all be found in their [documentation](https://github.com/vinissimus/next-translate#add-i18njs-config-file).
+Through this library you set and create your namespaces _JSON_ files and the corresponding pages that they should be loaded by, and then through their custom `useTranslation()` hook you can retrieve the translations per namespace as needed. The placement of files and details on how to set up the `i18n.json` settings file can all be found in their [documentation](https://github.com/vinissimus/next-translate#add-i18njs-config-file).
 
 `useTranslation()` also gives you the current locale string through the variable `lang`, which often makes `useRouter()` if used in the same scope.
 
@@ -177,7 +175,7 @@ export async function getStaticProps(context) {
 
 ### Page transition animations
 
-I thought this would be a simple addition, however it created quite the headache. After searching all over for something that worked, I found a solution (shout out to [this article by James Wallis](https://wallis.dev/blog/nextjs-page-transitions-with-framer-motion)) using Framer Motion.
+I thought this would be a simple addition, however it created quite the headache. After searching all over for something that worked, I found a solution using Framer Motion (with help from [this article by James Wallis](https://wallis.dev/blog/nextjs-page-transitions-with-framer-motion)).
 
 In my `_app.js` file I wrapped my page **&lt;Component&gt;** with Framer Motion's **&lt;AnimatePresence&gt;** component.
 
@@ -193,15 +191,15 @@ I then wrapped all my child page's content in a custom **&lt;PageTransitionWrapp
 
 Once I had it working perfectly in my development environment, I built it locally and tested. Tragedy struck. Once you clicked on a link to a different page, the transition animation would start as normal, but all the styles for the components on the previous page would be lost, leaving the previous page an ugly mess as it faded from view...
 
-I'm guessing the NextJS build step over-optimised the SASS Modules that I had been using for styling my app up until then. It must have been discardeding the previous page's styles at the start of the transition... Either way apparently it is a known (and unfixed) bug.
+I'm guessing the NextJS build step over-optimised the SASS Modules that I had been using for styling my app up until then. It must have been discarded the previous page's styles at the start of the transition. Either way apparently it is a known (and unfixed) bug.
 
-Regardless of why it happened, it answers a question you may have had if you looked at my source code...
+Regardless of why it happened, it answers a question you may have had if you looked at my source code.
 
 ### Why I styled my entire app with a single global SASS stylesheet
 
-I spent 90% of my time coding this app with SASS modules. But this wouldn't fly with the Framer Motion page transition/NextJS bug.
+Before encountering the page-transition bug, I had been coding this app with SASS modules. But this wouldn't fly with the Framer Motion page transition/NextJS bug.
 
-With a single global stylesheet, I lost some performance benefits from lazy-loading styles, classname minification, and also the safetly of locally-scoped styles.
+Using a single global stylesheet would fix the bug, but I would lose some performance benefits from lazy-loading styles, classname minification, and also the safety of locally-scoped styles.
 
 Completely refactoring my app to work with a single global SASS stylesheet was painful. But, it's a tiny site, and I was already efficent at coding safe and maintainable stylesheets, so sacrificing the drawbacks for slick page transitions ultimately felt worth it.
 
@@ -218,25 +216,25 @@ Features :
 -   Make the Hero Vincent Van Gogh's eyes follow the users cursor on hover
 -   Get CSS modules working with MDX (hard)
 
-Actually probably should get around to :
+Things I should actually probably get around to :
 
--   Create **&lt;InlineLink&gt;** UI component with **_true_** external link checking
-    -   Currently the inline links used inside MDX and my _Works_ items only weakly check if the link is external or not before adding `target="_blank"` and the external-link arrow icon
+-   Provide smooth-scroll polyfill for Safari users
+    -   Currently for smooth scrolling I'm just using the CSS-based `:root { scroll-behavior: smooth; }`, which is unsupported by Safari.
 -   Automatic check if dark mode is preferred by user, and set appropriately
 -   Use a tool like Cloudinary to automatically generate blog-post OGP cover-images
--   Check amount of people visiting in Safari and provide smooth-scroll polyfill
-    -   Currently for smooth scrolling I'm just using the CSS-based `:root { scroll-behavior: smooth; }`, which is unsupported by Safari.
+-   Create **&lt;InlineLink&gt;** UI component with **_true_** external link checking
+    -   Currently the inline links used inside MDX and my _Works_ items only weakly check if the link is external or not before adding `target="_blank"` and the external-link arrow icon
 
 ## Tooling index
 
--   JS Framework - NextJS
--   Hosting - Vercel
--   I18n – [next-translate](https://github.com/vinissimus/next-translate) + default NextJS i18n routing
--   Page transition animations – Framer Motion
--   Articles
+-   **JS Framework** - NextJS
+-   **Hosting** - Vercel
+-   **I18n** – [next-translate](https://github.com/vinissimus/next-translate) + default NextJS i18n routing
+-   **Page transition animations** – Framer Motion
+-   **Articles**
     -   Written in MDX (parsed & bundled by [mdx-bundler](https://github.com/kentcdodds/mdx-bundler))
     -   Metadata created with [gray-matter](https://github.com/jonschlinkert/gray-matter)
     -   Syntax highlighting – [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer)
--   Email objuscation – [react-obfuscate](https://github.com/coston/react-obfuscate)
--   Typewriter effect – [TypewriterJS](https://github.com/tameemsafi/typewriterjs#readme)
--   Placeholder image generation – [Plaiceholder](https://plaiceholder.co/)
+-   **Email obfuscation** – [react-obfuscate](https://github.com/coston/react-obfuscate)
+-   **Typewriter effect** – [TypewriterJS](https://github.com/tameemsafi/typewriterjs#readme)
+-   **Placeholder image generation** – [Plaiceholder](https://plaiceholder.co/)
