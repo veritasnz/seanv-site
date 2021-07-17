@@ -225,6 +225,7 @@ $hero-break-flex: 650px;
     &__typewriter {
         .Typewriter {
             display: inline-block;
+            max-width: 100%;
         }
 
         .Typewriter__cursor {
