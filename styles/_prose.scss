@@ -1,4 +1,6 @@
-.prose {
+/* Prose
+----------------------------------------------- */
+.o-prose {
     font-size: 1em;
     line-height: 1.75;
     text-transform: none;
@@ -65,7 +67,7 @@
                 height: 0.375em;
                 top: calc(0.875em - 0.1875em);
                 left: 0.25em;
-            
+
                 border-radius: 50%;
                 width: 0.375em;
                 height: 0.375em;
