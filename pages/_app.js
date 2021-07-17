@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import App from "next/app";
 import Head from "next/head";
 import { DefaultSeo } from "next-seo";
+import { useRouter } from "next/router";
+import { AnimatePresence } from "framer-motion";
 
 import { SITE_URL } from "../lib/constants";
 
@@ -11,9 +13,10 @@ import Header from "../components/Layout/Header/Header";
 import Footer from "../components/Layout/Footer/Footer";
 import Clouds from "../components/UI/Animations/Clouds";
 
-import { AnimatePresence } from "framer-motion";
-
 function MyApp({ Component, pageProps, router }) {
+    /**
+     * SEO Setup
+     */
     const url = router.pathname;
     const locale = router.locale;
 
@@ -51,6 +54,21 @@ function MyApp({ Component, pageProps, router }) {
         dangerouslySetAllPagesToNoIndex: true,
     };
 
+    /**
+     * Analytics Setup
+     */
+    const gtagRouter = useRouter();
+
+    useEffect(() => {
+        const handleRouteChange = (url) => gtag.pageview(url);
+        gtagRouter.events.on("routeChangeComplete", handleRouteChange);
+        return () =>
+            gtagRouter.events.off("routeChangeComplete", handleRouteChange);
+    }, [gtagRouter.events]);
+
+    /**
+     * JSX Return
+     */
     return (
         <>
             <Head>
