@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps, router }) {
     const seoSite = seoName + " | " + seoRole;
     const seoDescription = isEnglish
         ? "Portfolio website & blog Sean Veritas. A developer that makes websites using tools like Wordpress & React."
-        : "ショーンヴェリタスのポートフォリオサイトとブログです。ウェブ開発者で、Wordpressやリアクトといった道具でサイトを作ります";
+        : "ショーンＶのポートフォリオサイトとブログです。ウェブ開発者で、Wordpressやリアクトといった道具でサイトを作ります";
 
     const seo = {
         titleTemplate: `%s | ${seoName}`,
