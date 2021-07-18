@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps, router }) {
             site_name: seoSite,
             images: [
                 {
-                    url: `${SITE_URL}/img/og-${locale}.png`,
+                    url: `${SITE_URL}/img/og-image-${locale}.png`,
                     width: 1320,
                     height: 1200,
                     alt: seoSite,
