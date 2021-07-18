@@ -50,7 +50,10 @@ export default function SocialLinks(props) {
                 </a>
             </li>
             <li>
-                <Obfuscate email="seanv@hotmail.co.nz" aria-label="Email">
+                <Obfuscate
+                    email={process.env.NEXT_PUBLIC_EMAIL}
+                    aria-label="Email"
+                >
                     <Icon
                         name="contact"
                         tooltip={hasTooltip ? "Email" : false}

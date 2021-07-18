@@ -34,7 +34,7 @@ export default function Hero(props) {
                     <div className="t-hero__bttnbox">
                         <Obfuscate
                             className="o-bttn o-bttn--blue"
-                            email="seanv@hotmail.co.nz"
+                            email={process.env.NEXT_PUBLIC_EMAIL}
                             obfuscateChildren={false}
                         >
                             {t("hero-contact-button")}
