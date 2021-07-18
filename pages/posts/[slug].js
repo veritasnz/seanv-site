@@ -13,7 +13,6 @@ import {
 import {
     getPostBySlug,
     getAllPosts,
-    getPostsDirectory,
 } from "../../lib/posts-api";
 
 import PageTransitionWrapper from "../../components/Layout/PageTransitionWrapper";
