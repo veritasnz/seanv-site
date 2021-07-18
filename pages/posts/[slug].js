@@ -102,16 +102,7 @@ export async function getStaticProps({ params, locale }) {
      */
     let post;
 
-    // Try get post data
-    try {
-        post = getPostBySlug(params.slug, POST_BODY_MATTER_TYPES, locale);
-    } catch (error) {
-        // if it doesn't exist... fs.readFileSync() can't find correlating .mdx file
-        // throws error - return 404
-        return {
-            notFound: true,
-        };
-    }
+    post = getPostBySlug(params.slug, POST_BODY_MATTER_TYPES, locale);
 
     const result = await bundleMDX(post.content);
     const { code: content } = result;
