@@ -10,7 +10,7 @@ body {
     font-size: var(--fs-body);
     font-weight: var(--fw-regular);
     line-height: var(--lh-body);
-    text-transform: lowercase;
+    // text-transform: lowercase;
 
     color: var(--text-body);
     background: var(--bg-first);
@@ -57,7 +57,7 @@ svg {
 button,
 select {
     color: inherit;
-    text-transform: lowercase;
+    // text-transform: lowercase;
 }
 
 button {
@@ -66,10 +66,6 @@ button {
 
 main {
     position: relative;
-
-    &.jp {
-        text-transform: none;
-    }
 }
 
 h1,
