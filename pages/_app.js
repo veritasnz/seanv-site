@@ -34,6 +34,8 @@ function MyApp({ Component, pageProps, router }) {
         defaultTitle: seoSite,
         description: seoDescription,
         openGraph: {
+            title: seoName,
+            description: seoDescription,
             type: "website",
             locale: locale,
             url: "seanv.dev",
