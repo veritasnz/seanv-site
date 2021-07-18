@@ -228,13 +228,26 @@ $hero-break-flex: 650px;
     }
 
     &__typewriter {
+        min-height: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
         .Typewriter {
-            display: inline-block;
+            display: inline;
             max-width: 100%;
         }
 
         .Typewriter__cursor {
             animation-timing-function: steps(1, jump-start) !important;
+        }
+
+        @media (min-width: 420px) {
+            min-height: 2em;
+        }
+
+        @media (min-width: 690px) {
+            min-height: 0;
         }
     }
 

@@ -12,7 +12,9 @@ export default function About(props) {
             <div className="t-about-intro">
                 <p className="t-about-intro__asl o-minitit">{t("about-asl")}</p>
                 <h3 className="t-about-intro__typewriter o-subtitle">
-                    <AboutTypewriter />
+                    <span>
+                        <AboutTypewriter />
+                    </span>
                 </h3>
                 <p className="t-about-intro__paragraph">
                     <Trans
