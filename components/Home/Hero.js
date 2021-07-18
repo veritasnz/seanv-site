@@ -56,11 +56,11 @@ export default function Hero(props) {
                 </div>
 
                 <div className="t-hero-hills__right">
-                    <Hill height={32} color="orange" isFacingLeft />
+                    <Hill height={28} color="orange" isFacingLeft />
                     <Hill height={108} color="blue" isFacingLeft />
 
                     <Hill height={60} color="blue" isFacingLeft />
-                    <Hill height={27} color="orange" isFacingLeft />
+                    <Hill height={46} color="orange" isFacingLeft />
                 </div>
             </div>
         </section>
