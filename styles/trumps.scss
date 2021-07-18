@@ -232,6 +232,11 @@ $hero-break-flex: 650px;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        > span {
+            display: inline-block;
+            max-width: 100%;
+        }
     
         .Typewriter {
             display: inline;
