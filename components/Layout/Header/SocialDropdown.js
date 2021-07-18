@@ -19,11 +19,6 @@ export default function SocialDropdown() {
         }
     };
 
-    const closeMenuHandler = () => {
-        parentRef.current.classList.remove("is-open");
-        parentRef.current.classList.add("is-closed");
-    };
-
     return (
         <>
             <div ref={parentRef} className="social-dropdown">
@@ -43,14 +38,6 @@ export default function SocialDropdown() {
                             color="currentColor"
                             hasTooltip={false}
                         />
-                        <button
-                            className="social-dropdown__close"
-                            onClick={closeMenuHandler}
-                            type="button"
-                            title="Close drawer"
-                        >
-                            <Icon name="chevronup" color="currentColor" />
-                        </button>
                     </div>
                 </div>
             </div>
