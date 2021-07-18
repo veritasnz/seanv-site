@@ -75,6 +75,26 @@ $mob-header-button-size: 2.4em;
         border-radius: 200vh;
         color: var(--bg-second);
         background-color: var(--blue-low);
+
+        .icon {
+            &:first-child {
+                margin-bottom: 0.2em;
+            }
+
+            &:last-child {
+                position: absolute;
+                left: 50%;
+                bottom: 1.3em;
+                font-size: 0.22em;
+                opacity: 0.8;
+                transform: rotateX(180deg) translateX(-50%);
+                transition: transform 300ms ease;
+
+                .social-dropdown.is-open & {
+                    transform: rotateX(0) translateX(-50%);
+                }
+            }
+        }
     }
 
     &__wrap {

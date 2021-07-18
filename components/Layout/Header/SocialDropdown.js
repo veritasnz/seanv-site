@@ -35,6 +35,7 @@ export default function SocialDropdown() {
                         title="Open drawer"
                     >
                         <Icon name="loudspeaker" color="currentColor" />
+                        <Icon name="chevronup" color="currentColor" />
                     </button>
                     <div className="social-dropdown__content">
                         <SocialLinks
