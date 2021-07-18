@@ -1,7 +1,6 @@
 import fs from "fs";
 import { join } from "path";
 import { useRouter } from "next/router";
-import ErrorPage from "next/error";
 import useTranslation from "next-translate/useTranslation";
 import { bundleMDX } from "mdx-bundler";
 import { NextSeo } from "next-seo";
@@ -20,6 +19,7 @@ import {
 } from "../../lib/posts-api";
 
 import PageTransitionWrapper from "../../components/Layout/PageTransitionWrapper";
+import Error404 from "../../components/Layout/Error404";
 import PostBody from "../../components/Posts/PostBody";
 import PostList from "../../components/Posts/PostList";
 import PageTitle from "../../components/Layout/Second/PageTitle";
@@ -32,9 +32,7 @@ function PostPage({ post, morePosts }) {
     const router = useRouter();
     const { t, lang } = useTranslation("common");
 
-    if (!router.isFallback && !post?.slug) {
-        return <ErrorPage statusCode={404} />;
-    }
+    if (!router.isFallback && !post?.slug) return <Error404 />;
 
     const catPath = {
         pathname: "/posts",
@@ -47,60 +45,55 @@ function PostPage({ post, morePosts }) {
     ];
 
     return (
-        <>
-            <PageTransitionWrapper>
-                <NextSeo
-                    title={post.title}
-                    description={post.excerpt}
-                    openGraph={{
-                        images: [
-                            {
-                                url: SITE_URL + post.ogImage.url,
-                                width: post.ogImage.width || 1200,
-                                height: post.ogImage.height || 900,
-                                alt: post.title,
-                            },
-                        ],
-                        type: "article",
-                        article: {
-                            publishedTime: post.date,
-                            modifiedTime: post.modifiedDate,
-                            tags: [post.categoryName],
+        <PageTransitionWrapper>
+            <NextSeo
+                title={post.title}
+                description={post.excerpt}
+                openGraph={{
+                    images: [
+                        {
+                            url: SITE_URL + post.ogImage.url,
+                            width: post.ogImage.width || 1200,
+                            height: post.ogImage.height || 900,
+                            alt: post.title,
                         },
-                    }}
-                />
+                    ],
+                    type: "article",
+                    article: {
+                        publishedTime: post.date,
+                        modifiedTime: post.modifiedDate,
+                        tags: [post.categoryName],
+                    },
+                }}
+            />
 
-                <PageTitle title={post.title} breadcrumbs={breadcrumbs} />
+            <PageTitle title={post.title} breadcrumbs={breadcrumbs} />
 
-                <Container type="second" width="thin">
-                    {router.isFallback ? (
-                        <div>Loading…</div>
-                    ) : (
-                        <>
-                            <PostHead post={post} />
-                            <PostBody content={post.content} lang={lang} />
-                            {morePosts.length > 0 && (
-                                <section className="more-posts">
-                                    <WaveBreak />
-                                    <h2 className="o-title">
-                                        {t("post-more-articles")}
-                                    </h2>
-                                    <PostList posts={morePosts} isGrid />
-                                    <div className="o-archive-bttn">
-                                        <LinkButton
-                                            color="orange"
-                                            href="/posts/"
-                                        >
-                                            {t("post-all-articles")}
-                                        </LinkButton>
-                                    </div>
-                                </section>
-                            )}
-                        </>
-                    )}
-                </Container>
-            </PageTransitionWrapper>
-        </>
+            <Container type="second" width="thin">
+                {router.isFallback ? (
+                    <div>Loading…</div>
+                ) : (
+                    <>
+                        <PostHead post={post} />
+                        <PostBody content={post.content} lang={lang} />
+                        {morePosts.length > 0 && (
+                            <section className="more-posts">
+                                <WaveBreak />
+                                <h2 className="o-title">
+                                    {t("post-more-articles")}
+                                </h2>
+                                <PostList posts={morePosts} isGrid />
+                                <div className="o-archive-bttn">
+                                    <LinkButton color="orange" href="/posts/">
+                                        {t("post-all-articles")}
+                                    </LinkButton>
+                                </div>
+                            </section>
+                        )}
+                    </>
+                )}
+            </Container>
+        </PageTransitionWrapper>
     );
 }
 
@@ -110,7 +103,18 @@ export async function getStaticProps({ params, locale }) {
     /**
      * MDX
      */
-    const post = getPostBySlug(params.slug, POST_BODY_MATTER_TYPES, locale);
+    let post;
+
+    // Try get post data
+    try {
+        post = getPostBySlug(params.slug, POST_BODY_MATTER_TYPES, locale);
+    } catch (error) {
+        // if it doesn't exist... fs.readFileSync() can't find correlating .mdx file
+        // throws error - return 404
+        return {
+            notFound: true,
+        };
+    }
 
     // Absolute dir
     const postsDirectory = getPostsDirectory(locale);
