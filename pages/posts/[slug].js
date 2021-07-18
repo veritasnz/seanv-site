@@ -1,5 +1,3 @@
-import fs from "fs";
-import { join } from "path";
 import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 import { bundleMDX } from "mdx-bundler";
@@ -116,24 +114,7 @@ export async function getStaticProps({ params, locale }) {
         };
     }
 
-    // Absolute dir
-    const postsDirectory = getPostsDirectory(locale);
-
-    // Reduce front-matter "imports" YAML array to
-    // "files" object, to then be used by 'bundleMDX'
-    let files = {};
-    if (post.imports) {
-        files = post.imports.reduce((obj, item) => {
-            const fullPath = join(postsDirectory, item);
-
-            return {
-                ...obj,
-                item: fs.readFileSync(fullPath, "utf8"),
-            };
-        }, {});
-    }
-
-    const result = await bundleMDX(post.content, { files: files });
+    const result = await bundleMDX(post.content);
     const { code: content } = result;
 
     /**
