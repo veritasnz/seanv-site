@@ -9,7 +9,7 @@ const works = [
         type: "Personal Project - App",
         stack: ["react", "redux", "javascript"],
         summary:
-            "A interactive pomodoro-style countdown timer app that works in cycles, with fully configurable cycle & voice settings, which are stored between visits.",
+            "An interactive pomodoro-style countdown timer app that works in cycles, with fully configurable cycle & voice settings, which are stored between visits.",
         links: [
             {
                 icon: "github",
