@@ -52,7 +52,6 @@ function MyApp({ Component, pageProps, router }) {
             site: "@veritas_nz",
             cardType: "summary_large_image",
         },
-        dangerouslySetAllPagesToNoIndex: true,
     };
 
     /**
