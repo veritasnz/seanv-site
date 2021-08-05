@@ -22,16 +22,16 @@ const works = [
     /**
      * Kurage Digital Site
      */
-    // {
-    //     name: "クラゲデジタルＨＰ",
-    //     url: "https://kuragedigital.com/",
-    //     thumbnailURL: "/img/works/kurage-digital.png",
-    //     type: "顧客依頼 - デザイン&開発",
-    //     stack: ["wordpress", "sass", "javascript", "php"],
-    //     summary:
-    //         "クラゲデジタルはWordpressのサイト制作を専門とするエージェンシーです。この会社ＨＰのデザインと開発を担当",
-    //     links: [],
-    // },
+    {
+        name: "クラゲデジタルＨＰ",
+        url: "https://kuragedigital.com/",
+        thumbnailURL: "/img/works/kurage-digital.png",
+        type: "顧客依頼 - デザイン&開発",
+        stack: ["wordpress", "sass", "javascript", "php"],
+        summary:
+            "クラゲデジタルはWordpressのサイト制作を専門とするエージェンシーです。この会社ＨＰのデザインと開発を担当",
+        links: [],
+    },
 
     /**
      * Various Client Sites

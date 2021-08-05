@@ -22,16 +22,16 @@ const works = [
     /**
      * Kurage Digital Site
      */
-    // {
-    //     name: "Kurage Digital Site",
-    //     url: "https://kuragedigital.com/",
-    //     thumbnailURL: "/img/works/kurage-digital.png",
-    //     type: "Client Work - Complete design & development",
-    //     stack: ["wordpress", "sass", "javascript", "php"],
-    //     summary:
-    //         "Kurage Digital is a boutique agency specialising in corporate website production with Wordpress.",
-    //     links: [],
-    // },
+    {
+        name: "Kurage Digital Site",
+        url: "https://kuragedigital.com/",
+        thumbnailURL: "/img/works/kurage-digital.png",
+        type: "Client Work - Complete design & development",
+        stack: ["wordpress", "sass", "javascript", "php"],
+        summary:
+            "Kurage Digital is a boutique agency specialising in corporate website production with Wordpress.",
+        links: [],
+    },
 
     /**
      * Various Client Sites
