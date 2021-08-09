@@ -88,7 +88,7 @@ function MyApp({ Component, pageProps, router }) {
                 <Clouds count="2" yOffset="-2vw" />
 
                 <AnimatePresence exitBeforeEnter>
-                    <Component {...pageProps} key={url} />
+                    <Component {...pageProps} key={router.asPath} />
                 </AnimatePresence>
             </main>
 
