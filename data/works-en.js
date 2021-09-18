@@ -4,7 +4,7 @@ const works = [
      */
     {
         name: "Next Wordless",
-        url: "https://wordless.seanv.dev",
+        url: "https://github.com/veritasnz/next-wordless-front",
         thumbnailURL: "/img/works/wordless.png",
         type: "Personal Project - App",
         stack: ["nextjs", "react", "graphql", "wordpress", "nodejs", "php"],
@@ -12,9 +12,14 @@ const works = [
             "Concept project for a headless Wordpress template. Utilises NextJS serverless functions + NodeJS for the 'Contact' form",
         links: [
             {
+                icon: "anchor",
+                url: "https://wordless.seanv.dev/",
+                tooltip: "See the sample site",
+            },
+            {
                 icon: "github",
                 url: "https://github.com/veritasnz/next-wordless-front",
-                tooltip: "See the open-source code",
+                tooltip: "See the code",
             },
         ],
     },
@@ -34,7 +39,7 @@ const works = [
             {
                 icon: "github",
                 url: "https://github.com/veritasnz/devclock",
-                tooltip: "See the open-source code",
+                tooltip: "See the code",
             },
         ],
     },
