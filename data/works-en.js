@@ -1,5 +1,25 @@
 const works = [
     /**
+     * Next Wordless
+     */
+    {
+        name: "Next Wordless",
+        url: "https://wordless.seanv.dev",
+        thumbnailURL: "/img/works/wordless.png",
+        type: "Personal Project - App",
+        stack: ["nextjs", "react", "graphql", "wordpress", "nodejs", "php"],
+        summary:
+            "Concept project for a headless Wordpress template. Utilises NextJS serverless functions + NodeJS for the 'Contact' form",
+        links: [
+            {
+                icon: "github",
+                url: "https://github.com/veritasnz/next-wordless-front",
+                tooltip: "See the open-source code",
+            },
+        ],
+    },
+
+    /**
      * _Devclock
      */
     {

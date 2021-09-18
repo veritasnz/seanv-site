@@ -1,5 +1,25 @@
 const works = [
     /**
+     * Next Wordless
+     */
+    {
+        name: "NextJSでヘッドレスWP",
+        url: "https://wordless.seanv.dev",
+        thumbnailURL: "/img/works/wordless.png",
+        type: "個人プロジェクト",
+        stack: ["nextjs", "react", "graphql", "wordpress", "nodejs", "php"],
+        summary:
+            "ヘッドレスWordpressの概念実証。NextJSのサーバーレス機能とNodeJSを「お問い合わせ」フォームに使用しています。",
+        links: [
+            {
+                icon: "github",
+                url: "https://github.com/veritasnz/next-wordless-front",
+                tooltip: "コードを見る（英語）",
+            },
+        ],
+    },
+
+    /**
      * _Devclock
      */
     {
