@@ -26,6 +26,7 @@ export default class MyDocument extends Document {
                         }}
                     />
                 </Head>
+                <script dangerouslySetInnerHTML={{ __html: `<!-- notice me Bunpro senpai!! -->` }} />
                 <body>
                     <Main />
                     <NextScript />
