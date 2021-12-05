@@ -13,6 +13,7 @@ import PHP from "../../../svg/icons/php.svg";
 import ReactJS from "../../../svg/icons/react.svg";
 import Redux from "../../../svg/icons/redux.svg";
 import Sass from "../../../svg/icons/sass.svg";
+import SVG from "../../../svg/icons/svg.svg";
 import Typescript from "../../../svg/icons/typescript.svg";
 import Wordpress from "../../../svg/icons/wordpress.svg";
 
@@ -72,6 +73,10 @@ export default function StackIcon(props) {
         sass: {
             component: <Sass {...iconProps} />,
             defaultTooltip: "Styling with Sass",
+        },
+        svg: {
+            component: <SVG {...iconProps} />,
+            defaultTooltip: "Built with SVG",
         },
         typescript: {
             component: <Typescript {...iconProps} />,
