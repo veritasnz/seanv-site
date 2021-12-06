@@ -1,0 +1,155 @@
+---
+title: "How I use Mochi SRS for my Japanese vocabulary training"
+categoryName: "Japanese"
+categorySlug: "japanese"
+excerpt: "A quick intro to the Mochi SRS app, what sets it apart from the competition, and how you can use its features to improve your study"
+readDuration: "5"
+date: "2021-12-06"
+# modifiedDate: "2021-03-20"
+ogImage:
+    url: "/img/posts/shared/mochi-app-for-vocab/cover.png"
+    width: 660
+    height: 600
+---
+
+[Mochi](https://mochi.cards/) is a study app that uses modifiable flash-cards and a spaced repetition system to maximize study retention and efficiency.  
+Sound familiar? There are already many other apps like it. I personally have used Memrise and Anki previously.
+
+In this article, we'll check out this great app and how to use it. I'll also discuss some reasons why I dropped Memrise/Anki in favor of Mochi for my Japanese-study arsenal.
+
+## What it is
+
+[Mochi](https://mochi.cards/) is a fully customizable, Markdown-based SRS flash card system.  
+Each flash-card is written in _Markdown_ (an easy-to-read text-editing format popular with developers – [read more here](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)).  
+Mochi allows you to build _'decks'_, which are a collection of _'cards'_ (flash-cards) or nested _decks_.  
+Mochi automatically builds an SRS-based reviewing schedule from all the cards you've created.
+
+## Where it shines
+
+You still might be wondering how this differs from apps Memrise or Anki. So here is where it truly out-shines the competition:
+
+### The Markdown syntax
+
+As I mentioned above, by default, each card in Mochi is consists of text in the _Markdown_ syntax. Vanilla _Markdown_ gives you enough flexibility alone, that allows lots of ways to freely customize your cards. Add bold text, images, headings, block-quotes, line breaks, hyperlinks, lists, and more to your cards.
+
+Mochi goes one step further with this, and extends the default _Markdown_ syntax system with some awesome and invaluable features _specific to language and Japanese learning_.
+
+These features allow the ability to add the following to your cards.:
+
+-   Hidden text that can be revealed with a click (called a _'cloze'_)
+    -   A great way to add hints to your cards
+-   _Furigana_ on top of _Kanji_
+-   References to other cards
+-   Text-to-speech conversion _(paid feature)_
+    -   Hear the text being pronounced aloud while you go through your reviews 🙌
+-   Automatic text translation
+
+#### Markdown in action
+
+<figure>
+    <img
+        src="/img/posts/en/mochi-app-for-vocab/md-example.png"
+        alt="A breakdown of some Markdown text used for a card. Arrows highlight the individual components & syntax that make up the card."
+    />
+    <figcaption>
+        An example of some _Markdown_ being used for the card of the word
+        「言い聞かせる」 Each line in the text has slightly different syntax,
+        showing how it will appear visually.
+    </figcaption>
+</figure>
+
+<figure>
+    <img
+        src="/img/posts/en/mochi-app-for-vocab/fin-example.png"
+        alt="A Mochi card for the word 「言い聞かせる」"
+    />
+    <figcaption>
+        How the card looks during review once it has been converted from
+        _Markdown_. Note how each item in the card corresponds to a line in the
+        _Markdown_ above.
+    </figcaption>
+</figure>
+
+There is definitely a bit of learning required to fully utilize the Mochi _Markdown_-based system and all of its features.  
+Until you get into the groove of using it, there is some documentation on using the _Markdown_ syntax and how to create cards. Read the docs [here](https://mochi.cards/docs/).
+
+### The card-templating system
+
+Cards (and their _Markdown_) can get rather long, especially if you're creating massive decks with cards that all have the same _format_.  
+For example, a deck of words, where **_every_** card shows repeated info like the word's part-of-speech and _Kana_ reading.  
+Replicating the formatting for every card would be very cumbersome.
+
+To counter this, Mochi allows you to create custom templates for your cards.
+
+Simply create a template, add all the _'custom fields'_ you want to use (e.g. part-of-speech, _Kana_, hints etc.), format the template's _Markdown_ to include these fields, and lastly apply the template to your decks. Now, whenever you add a card to that deck, all you need to do is fill in the contents of each field, and it will automatically format it for you!
+
+<figure>
+    <img
+        src="/img/posts/en/mochi-app-for-vocab/template-creation.png"
+        alt="The template creation screen of Mochi SRS"
+    />
+    <figcaption>
+        The template creation screen of Mochi. Note the correspondence between
+        the custom-field declarations below, and how they are placed inside the
+        _Markdown_ text using the `≪ ≫` characters.
+    </figcaption>
+</figure>
+
+<figure>
+    <img
+        src="/img/posts/en/mochi-app-for-vocab/template-entry.png"
+        alt="The Mochi card data entry screen when using a template"
+    />
+    <figcaption>
+        The Mochi card data entry screen when using a template. This is much
+        easier to read than the pure _Markdown_ text that was shown previously.
+    </figcaption>
+</figure>
+
+The above template is what I use to study Japanese _words_. I also use another template, which has a slightly different format, which I use to study _phrases and colocations_.
+
+### Other cool features of the app
+
+-   Cloud file syncing for all your decks and content _(paid feature)_
+-   _Search_ feature
+-   Advanced customizability (including the ability to tweak the SRS intervals)
+-   Tags and relational card linking
+-   Anki → Mochi import tool
+-   _Markdown_ file export tool for your decks
+    -   currently does not support templated decks
+
+## Why I ditched Anki and Memrise
+
+A few key features mentioned above are missing from Anki and Memrise.
+
+Anki offers no cloud storage options if you often switch between devices. You have to manage this yourself somehow. I did this using Google Drive for a while, but just found it clunky.  
+Anki's interface is also hard to navigate and a bit Jurassic.
+
+Memrise hamstrings you at every corner, and does not cater at all to deck-builders or power-users. It restricts you in some very arbitrary and infuriating ways.
+
+-   There is no _search_ feature... 🙄
+    -   On top of having no search feature, it also paginates your database of items, which makes it _impossible_ to use Cmd+F to find content if you've got a database of 1000+ items
+-   It's constantly buggy
+    -   the memo system never worked, and would constantly delete any memos that I tried to save
+    -   The screen didn't scale well when I had a database with many columns (especially when inputting)
+-   The app tries to autocorrect and auto-predict text while you're trying to input it
+
+After begrudgingly relying on Memrise for 3 or so years, I was pretty darn happy to find Mochi!
+
+---
+
+## In conclusion...
+
+I've been using Mochi for about half a year, and I am loving it.  
+Mochi is a relatively new app, but the developer is putting in tonnes of work into it, ironing out bugs and listening to feedback. It is also available on basically every platform, including am in-browser app.
+
+I have only a few critiques towards the app at this point, but they might be deal-breaking to some people:
+
+-   There is a technical barrier-to-entry, as users must spend time learning the _Markdown_ syntax and the templating system
+-   There is currently no way to share decks yet
+    -   this is on the development roadmap for the app – for now you have to export and import your decks manually
+-   Two of the main draws to the app for me (cloud syncing and text-to-speech) are behind a pay wall
+
+For me however, it's really helped bridge a gap that Memrise and Anki just haven't been able to fill 🙏
+
+As always, reach out to me on social media or email and let me know if you have any questions or thoughts related to this article!
