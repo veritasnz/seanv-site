@@ -79,6 +79,31 @@ const works = [
     },
 
     /**
+     * Maplink
+     */
+    {
+        name: "マップリンク",
+        url: "/posts/map-link-app",
+        thumbnailURL: "/img/works/map-link.png",
+        type: "顧客依頼 - 開発",
+        stack: ["react", "svg", "javascript"],
+        summary:
+            "Reactで作った地図資料作成ツール。パン、ペイント、ズームして地図をいじって、最後に地図をPNGファイルとしてダウンロード。",
+        links: [
+            {
+                icon: "article",
+                url: "/posts/map-link-app",
+                tooltip: "Read the article",
+            },
+            {
+                icon: "anchor",
+                url: "https://ee-arts.biz/map/47%e9%83%bd%e9%81%93%e5%ba%9c%e7%9c%8c-2/",
+                tooltip: "Demo the app",
+            },
+        ],
+    },
+
+    /**
      * WP Boilerplate
      */
     {

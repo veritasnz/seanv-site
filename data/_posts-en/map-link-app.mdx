@@ -1,0 +1,78 @@
+---
+title: "Map-Link – Creating a simple interactive map-app /w React + SVG"
+categoryName: "Code"
+categorySlug: "code"
+excerpt: "In this short post I discuss how I created the interactive map app, 'MapLink', capable of panning, painting, zooming the map, and also saving the final map as a PNG"
+readDuration: "7"
+date: "2021-12-05"
+# modifiedDate: "2021-03-20"
+ogImage:
+    url: "/img/posts/en/map-link-app/cover.jpg"
+    width: 660
+    height: 600
+---
+
+MAP-Link is a React-based map-manipulation tool, made to be used by Geography teachers in Japan. It allows users to fill in sections of the map with different colors, completely reset or undo those fill operations, zoom the map and also pan it with their mouse.
+Finally, when the user is done with their editing, they can directly download a PNG file of their map using the download button.
+
+This project was for a friend of mine, who is creating a database website to provide Geography teachers in Japan with resources. I embedded the app directly into his Wordpress site, and also helped him integrate a subscription system into it too.
+
+Although most of the maps are only accessibly via a paid subscription, you can try out one of the free maps, available [here](https://ee-arts.biz/map/47%e9%83%bd%e9%81%93%e5%ba%9c%e7%9c%8c-2/)  
+The controls are in Japanese, but if you are using Chrome you translate them using the inbuilt translator (right click -> _'Translate to English'_).
+
+The whole project was a lot of fun, and getting SVG to work with React required some interesting problem-solving.
+
+---
+
+## How it works
+
+### Overview
+
+-   The app is split into the _controller_ section (where all the buttons are located) and the map itself
+-   Essentially, the user is directly manipulating the SVG element, the inner `<path>` elements (which form the states/countries of the map), and also some wrapper elements around the SVG
+-   The maps are managed and stored using a Wordpress Custom Post type + a custom field attached to the post for storing the map's SVG data
+    -   Hence, to switch to a different the map, the user needs to change the page, and the app is re-initialised every time this happens (each time with different map data)
+
+### Converting and creating the map
+
+-   I created a React hook (_useMap_) that provides the component tree with both the functions to manipulate the map, and the map element itself
+-   The hook declares some _refs_ (_useRef_), some _state objects_ (_useState_), and also some functions that will use them
+-   Then the hook takes the raw SVG data and _React_-ifies it. Turning normal HTML elements into React elements. It also attaches the _refs_ mentioned above to the sub-elements
+    -   This is all done inside a _useEffect_, to ensure the DOM has been loaded and the map data can be retrieved safely
+
+### Painting & undoing
+
+-   The current color selected by the user is managed with React's _useState_ hook
+-   During the map-conversion process, click handlers are added to the inner `<path>` elements, so that when clicked, they change color based on this state
+    -   Clicking on a `<path>` element just changes its `fill` color
+-   The 'undo' feature is just a stack which holds the instructions to reverse the last paint operation
+    -   And the 'reset' feature just executes 'undo' on everything in the stack and clears it
+
+### Panning & zooming
+
+-   For the panning feature, calculations are run based on where the user is dragging their mouse, the size of the map dimensions, and also the level of zoom the map is currently in
+-   The result of these calculations is then used to change the CSS `transform` value of one of the map wrapper elements 
+-   Zooming is similar, using the _zoom_ state to transform a different wrapper element's CSS `transform` value
+
+### Converting to a PNG and downloading
+
+-   This was probably the most cumbersome thing to accomplish in this project
+-   To download an image from the browser using Javascript, one must first have the contents be _painted_ onto a HTML5 `<canvas>` element
+-   Initially I tried to use a 3rd party library called [HTML2Canvas](https://html2canvas.hertzen.com/) to convert my map and its wrapper elements to a canvas, where it could then be downloaded
+    -   The library couldn't quite replicate the transformations I was performing on the map's wrapper elements
+-   I ended up having to implement this conversion myself. And with some calculations based on the map SVG dimensions and the wrapper's transformations, I was able to copy the manipulated map onto the canvas element.
+-   From there, I was easily able to complete the PNG download function.
+
+### Exporting the project for Wordpress
+
+-   I used the 3rd-party [CRACO](https://github.com/gsoft-inc/craco) (Create React App Configuration Override) library to wrap and export the entire React project as a single JS file. This allowed me to easily load the file at the bottom of each map page.
+    -   Shoutout to [this blog post](https://dev.to/julbrs/how-to-use-react-inside-a-wordpress-application-49i) for the instructions on how to do this.
+
+---
+
+## Final thoughts
+In hindsight, using React was probably not necessary for this project. Some solutions had to be over-engineered just to work around some of React's quirks. This was true when it comes to _refs_, and the order in which you initialize / assign them.  
+Because I used React, there was a lot of deep prop drilling too, and passing of functions to other functions.  
+State also wasn't a huge part of the app, and vanilla JS with some globally scoped variables would have probably worked just fine.
+
+Anyway, I think the finished product turned out great! Let me know if you have any thoughts or questions about it.

@@ -79,6 +79,31 @@ const works = [
     },
 
     /**
+     * Maplink
+     */
+    {
+        name: "Map-Link",
+        url: "/posts/map-link-app",
+        thumbnailURL: "/img/works/map-link.png",
+        type: "Client Work - Development",
+        stack: ["react", "svg", "javascript"],
+        summary:
+            "A React-based map-manipulation tool, capable of panning, painting, zooming the map, and also downloading the final map as a PNG file",
+        links: [
+            {
+                icon: "article",
+                url: "/posts/map-link-app",
+                tooltip: "Read the article",
+            },
+            {
+                icon: "anchor",
+                url: "https://ee-arts.biz/map/47%e9%83%bd%e9%81%93%e5%ba%9c%e7%9c%8c-2/",
+                tooltip: "Demo the app",
+            },
+        ],
+    },
+
+    /**
      * WP Boilerplate
      */
     {
