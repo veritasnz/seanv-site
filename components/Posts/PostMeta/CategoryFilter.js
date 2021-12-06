@@ -14,15 +14,15 @@ function CategoryFilter(props) {
             const termQuery =
                 termSlug === "all" ? null : { filterBy: termSlug };
 
-            // update the router location
-            router.push(
-                {
-                    pathname: router.pathname,
-                    query: termQuery,
-                },
-                undefined,
-                { shallow: true } // don't rerender page (only works in prod)
-            );
+            // // Update the router location (forces page redraw - thus also forces unneeded page-animation)
+            // router.push(
+            //     {
+            //         pathname: router.pathname,
+            //         query: termQuery,
+            //     },
+            //     undefined,
+            //     { shallow: true } // don't rerender page (only works in prod)
+            // );
 
             onTermUpdate(termSlug);
         },
