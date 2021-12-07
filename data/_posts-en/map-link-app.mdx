@@ -17,12 +17,20 @@ Finally, when the user is done with their editing, they can directly download a 
 
 This project was for a friend of mine, who is creating a database website to provide Geography teachers in Japan with resources. I embedded the app directly into his Wordpress site, and also helped him integrate a subscription system into it too.
 
-Although most of the maps are only accessibly via a paid subscription, you can try out one of the free maps, available [here](https://ee-arts.biz/map/47%e9%83%bd%e9%81%93%e5%ba%9c%e7%9c%8c-2/)  
-The controls are in Japanese, but if you are using Chrome you translate them using the inbuilt translator (right click -> _'Translate to English'_).
-
-The whole project was a lot of fun, and getting SVG to work with React required some interesting problem-solving.
+The whole project was a lot of fun, doing anything with SVG manipulation is always an interesting challenge.
 
 ---
+
+Most of the maps are only accessibly via a paid subscription, but you can try out one of the free [here](https://ee-arts.biz/map/47%e9%83%bd%e9%81%93%e5%ba%9c%e7%9c%8c-2/).  
+The controls are in Japanese, but if you are using Chrome you translate them using the inbuilt translator (right click -> _'Translate to English'_).
+
+<figure>
+    <img
+        src="https://res.cloudinary.com/veritasnz/image/upload/v1638874267/recording_jcm6f5.gif"
+        alt="Animated GIF of the map editing and downloading process using Map-Link"
+    />
+    <figcaption>Editing and downloading a map using Map-Link</figcaption>
+</figure>
 
 ## How it works
 
@@ -51,7 +59,7 @@ The whole project was a lot of fun, and getting SVG to work with React required 
 ### Panning & zooming
 
 -   For the panning feature, calculations are run based on where the user is dragging their mouse, the size of the map dimensions, and also the level of zoom the map is currently in
--   The result of these calculations is then used to change the CSS `transform` value of one of the map wrapper elements 
+-   The result of these calculations is then used to change the CSS `transform` value of one of the map wrapper elements
 -   Zooming is similar, using the _zoom_ state to transform a different wrapper element's CSS `transform` value
 
 ### Converting to a PNG and downloading
@@ -71,6 +79,7 @@ The whole project was a lot of fun, and getting SVG to work with React required 
 ---
 
 ## Final thoughts
+
 In hindsight, using React was probably not necessary for this project. Some solutions had to be over-engineered just to work around some of React's quirks. This was true when it comes to _refs_, and the order in which you initialize / assign them.  
 Because I used React, there was a lot of deep prop drilling too, and passing of functions to other functions.  
 State also wasn't a huge part of the app, and vanilla JS with some globally scoped variables would have probably worked just fine.
