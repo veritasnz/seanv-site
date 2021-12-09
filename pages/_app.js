@@ -43,8 +43,8 @@ function MyApp({ Component, pageProps, router }) {
             images: [
                 {
                     url: `${SITE_URL}/img/og-image-${locale}.png`,
-                    width: 1320,
-                    height: 1200,
+                    width: 1201,
+                    height: 630,
                     alt: seoSite,
                 },
             ],
