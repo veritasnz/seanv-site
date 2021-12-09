@@ -17,7 +17,7 @@ Finally, when the user is done with their editing, they can directly download a 
 
 This project was for a friend of mine, who is creating a database website to provide Geography teachers in Japan with resources. I embedded the app directly into his Wordpress site, and also helped him integrate a subscription system into it too.
 
-The whole project was a lot of fun, doing anything with SVG manipulation is always an interesting challenge.
+The whole project was a lot of fun, and doing anything with SVG manipulation is always an interesting challenge.
 
 ---
 
@@ -32,7 +32,7 @@ The controls are in Japanese, but if you are using Chrome you translate them usi
     <figcaption>Editing and downloading a map using Map-Link</figcaption>
 </figure>
 
-## How it works
+## Under the hood
 
 ### Overview
 
@@ -76,12 +76,17 @@ The controls are in Japanese, but if you are using Chrome you translate them usi
 -   I used the 3rd-party [CRACO](https://github.com/gsoft-inc/craco) (Create React App Configuration Override) library to wrap and export the entire React project as a single JS file. This allowed me to easily load the file at the bottom of each map page.
     -   Shoutout to [this blog post](https://dev.to/julbrs/how-to-use-react-inside-a-wordpress-application-49i) for the instructions on how to do this.
 
+### Lessons learnt
+
+In hindsight, using React was probably not necessary for this project.  
+Some solutions had to be over-engineered just to work around some of React's quirks
+
+-   _refs_ were awkward to work with, and the order in which I had to initialize / assign them had to be fine tuned
+-   There was a lot of awkward deep prop drilling, and passing of functions to other functions
+-   State wasn't a huge part of the app
+    -   Vanilla JS with some globally scoped variables would have probably worked just as well
+
 ---
 
-## Final thoughts
-
-In hindsight, using React was probably not necessary for this project. Some solutions had to be over-engineered just to work around some of React's quirks. This was true when it comes to _refs_, and the order in which you initialize / assign them.  
-Because I used React, there was a lot of deep prop drilling too, and passing of functions to other functions.  
-State also wasn't a huge part of the app, and vanilla JS with some globally scoped variables would have probably worked just fine.
-
-Anyway, I think the finished product turned out great! Let me know if you have any thoughts or questions about it.
+Anyway, I think the finished product turned out great!  
+Let me know if you have any thoughts or questions about this project.
