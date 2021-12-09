@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://seanv.dev
+
+# Sitemaps
+Sitemap: https://seanv.dev/sitemap.xml
