@@ -1,3 +1,7 @@
+/**
+ * Required node version v16.9.1
+ */
+
 const nextTranslate = require("next-translate");
 
 const { withPlaiceholder } = require("@plaiceholder/next");
