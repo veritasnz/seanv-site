@@ -32,6 +32,7 @@ export default function About(props) {
                         isStack
                         icons={[
                             "react",
+                            "typescript",
                             "nextjs",
                             "wordpress",
                             "sass",
@@ -46,7 +47,7 @@ export default function About(props) {
                     </h3>
                     <IconList
                         isStack
-                        icons={["typescript", "mongodb", "express", "nodejs"]}
+                        icons={["express", "nodejs", "mongodb"]}
                     />
                 </div>
             </div>
