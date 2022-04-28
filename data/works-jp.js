@@ -45,6 +45,26 @@ const works = [
     },
 
     /**
+     * WP Boilerplate
+     */
+    {
+        name: "Wordpressテンプレート",
+        url: null,
+        thumbnailURL: "/img/works/boilerplate.png",
+        type: "個人プロジェクト",
+        stack: ["wordpress", "webpack", "sass", "javascript", "php"],
+        summary:
+            "自分なりのWPテーマ制作をするためのテーマテンプレート。よく使うプラグインやライブラリーを対応しているテンプレートの使用では、スムーズに手早くテーマ制作が始めれる",
+        links: [
+            {
+                icon: "github",
+                url: "https://github.com/veritasnz/wp-boilerplate",
+                tooltip: "コードを見る",
+            },
+        ],
+    },
+
+    /**
      * Kurage Digital Site
      */
     {
@@ -99,26 +119,6 @@ const works = [
                 icon: "anchor",
                 url: "https://ee-arts.biz/map/47%e9%83%bd%e9%81%93%e5%ba%9c%e7%9c%8c-2/",
                 tooltip: "Demo the app",
-            },
-        ],
-    },
-
-    /**
-     * WP Boilerplate
-     */
-    {
-        name: "Wordpressテンプレート",
-        url: null,
-        thumbnailURL: "/img/works/boilerplate.png",
-        type: "個人プロジェクト",
-        stack: ["wordpress", "sass", "javascript", "php"],
-        summary:
-            "自分なりのWPテーマ制作をするためのテーマテンプレート。よく使うプラグインやライブラリーを対応しているテンプレートの使用では、スムーズに手早くテーマ制作が始めれる",
-        links: [
-            {
-                icon: "github",
-                url: "https://github.com/veritasnz/wp-boilerplate",
-                tooltip: "コードを見る",
             },
         ],
     },

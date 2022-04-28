@@ -45,6 +45,26 @@ const works = [
     },
 
     /**
+     * WP Boilerplate
+     */
+    {
+        name: "Wordpress Boilerplate",
+        url: null,
+        thumbnailURL: "/img/works/boilerplate.png",
+        type: "Personal Project",
+        stack: ["wordpress", "webpack", "sass", "javascript", "php"],
+        summary:
+            "My boilerplate for creating WP themes. Gets me straight into theme production quickly and smoothly, supporting all my heavily used plugins and libraries.",
+        links: [
+            {
+                icon: "github",
+                url: "https://github.com/veritasnz/wp-boilerplate",
+                tooltip: "See the code",
+            },
+        ],
+    },
+
+    /**
      * Kurage Digital Site
      */
     {
@@ -99,26 +119,6 @@ const works = [
                 icon: "anchor",
                 url: "https://ee-arts.biz/map/47%e9%83%bd%e9%81%93%e5%ba%9c%e7%9c%8c-2/",
                 tooltip: "Demo the app",
-            },
-        ],
-    },
-
-    /**
-     * WP Boilerplate
-     */
-    {
-        name: "Wordpress Boilerplate",
-        url: null,
-        thumbnailURL: "/img/works/boilerplate.png",
-        type: "Personal Project",
-        stack: ["wordpress", "sass", "javascript", "php"],
-        summary:
-            "My boilerplate for creating WP themes. Gets me straight into theme production quickly and smoothly, supporting all my heavily used plugins and libraries.",
-        links: [
-            {
-                icon: "github",
-                url: "https://github.com/veritasnz/wp-boilerplate",
-                tooltip: "See the code",
             },
         ],
     },
