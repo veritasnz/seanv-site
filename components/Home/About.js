@@ -35,6 +35,7 @@ export default function About(props) {
                             "typescript",
                             "nextjs",
                             "wordpress",
+                            "webpack",
                             "sass",
                             "graphql",
                             "redux",
