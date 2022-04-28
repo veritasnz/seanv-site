@@ -16,6 +16,7 @@ import Sass from "../../../svg/icons/sass.svg";
 import SVG from "../../../svg/icons/svg.svg";
 import Typescript from "../../../svg/icons/typescript.svg";
 import Wordpress from "../../../svg/icons/wordpress.svg";
+import Webpack from "../../../svg/icons/webpack.svg";
 
 export default function StackIcon(props) {
     const { name, color } = props;
@@ -81,6 +82,10 @@ export default function StackIcon(props) {
         typescript: {
             component: <Typescript {...iconProps} />,
             defaultTooltip: "Typescript",
+        },
+        webpack: {
+            component: <Webpack {...iconProps} />,
+            defaultTooltip: "Webpack bundler",
         },
         wordpress: {
             component: <Wordpress {...iconProps} />,
