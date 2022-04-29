@@ -117,7 +117,7 @@ const works = [
             },
             {
                 icon: "anchor",
-                url: "https://ee-arts.biz/map/47%e9%83%bd%e9%81%93%e5%ba%9c%e7%9c%8c-2/",
+                url: "https://ee-arts.biz/map/mollweide-0/",
                 tooltip: "Demo the app",
             },
         ],
