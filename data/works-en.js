@@ -108,7 +108,7 @@ const works = [
         type: "Client Work - Development",
         stack: ["react", "svg", "javascript"],
         summary:
-            "A React-based map-manipulation tool. Pan, paint, and zoom the map, and then download the final product as a PNG file",
+            "A React-based map-manipulation tool. Pan, paint, and zoom the map, and then download the final product as a PNG file. Note the demo is in Japanese.",
         links: [
             {
                 icon: "article",
