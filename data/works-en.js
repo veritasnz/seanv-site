@@ -1,5 +1,29 @@
 const works = [
     /**
+     * Wonideto
+     */
+    {
+        name: "Wonideto (WIP)",
+        url: "https://wonideto.seanv.dev/",
+        thumbnailURL: "/img/works/wonideto.png",
+        type: "Personal Project - App",
+        stack: ["typescript", "nextjs", "react", "nodejs"],
+        summary:
+            "An app for practicing particle use in Japanese. This is going to be a long-haul, an iterative project. Written in Typescript with NextJS. Testing with Vitest.",
+        links: [
+            {
+                icon: "anchor",
+                url: "https://wonideto.seanv.dev/",
+                tooltip: "See the app",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/veritasnz/wonideto",
+                tooltip: "See the code",
+            },
+        ],
+    },
+    /**
      * Next Wordless
      */
     {

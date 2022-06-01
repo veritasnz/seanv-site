@@ -1,12 +1,36 @@
 const works = [
     /**
+     * Wonideto
+     */
+    {
+        name: "Wonideto (をにでと)",
+        url: "https://wonideto.seanv.dev/",
+        thumbnailURL: "/img/works/wonideto.png",
+        type: "個人プロジェクト・アプリ",
+        stack: ["typescript", "nextjs", "react", "nodejs"],
+        summary:
+            "日本語の助詞の使い方を練習するアプリ。このプロジェクトを少しずつ改善していく予定。TypescriptとNextJSで書かれています。テストはVitestで行っています。",
+        links: [
+            {
+                icon: "anchor",
+                url: "https://wonideto.seanv.dev/",
+                tooltip: "アプリへ行く",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/veritasnz/wonideto",
+                tooltip: "コードを見る（英語）",
+            },
+        ],
+    },
+    /**
      * Next Wordless
      */
     {
         name: "NextJSでヘッドレスWP",
         url: "https://github.com/veritasnz/next-wordless-front",
         thumbnailURL: "/img/works/wordless.png",
-        type: "個人プロジェクト",
+        type: "個人プロジェクト・アプリ",
         stack: ["nextjs", "react", "graphql", "wordpress", "nodejs", "php"],
         summary:
             "ヘッドレスWordpressの概念実証。NextJSのサーバーレス機能とNodeJSを「お問い合わせ」フォームに使用しています。",
