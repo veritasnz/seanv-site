@@ -9,7 +9,7 @@ export default function SocialLinks(props) {
         <ul {...otherProps}>
             <li>
                 <a
-                    href="https://www.linkedin.com/in/sean-verity/"
+                    href="https://www.linkedin.com/in/seanveritas/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Linked In"
