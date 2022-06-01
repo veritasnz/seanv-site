@@ -9,7 +9,7 @@ const works = [
         type: "Personal Project - App",
         stack: ["typescript", "nextjs", "react", "nodejs"],
         summary:
-            "An app for practicing particle use in Japanese. This is going to be a long-haul, an iterative project. Written in Typescript with NextJS. Testing with Vitest.",
+            "An app for practicing particle use in Japanese. This is going to be an ongoing project for me. Written in Typescript with NextJS. Testing with Vitest.",
         links: [
             {
                 icon: "anchor",
