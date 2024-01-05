@@ -7,34 +7,34 @@ readDuration: "10-15"
 date: "2021-07-16"
 # modifiedDate: "2021-03-20"
 ogImage:
-    url: "/img/posts/en/how-i-made-my-blog/cover.png"
-    width: 1320
-    height: 1200
+  url: "/img/posts/en/how-i-made-my-blog/cover.png"
+  width: 1320
+  height: 1200
 ---
 
-import Code from "../components/MDX/Code";
+import Code from "../components/MDX/Code.jsx";
 import ExampleMDXComponent from "../components/MDX/ExampleMDXComponent";
 
 Coming fresh out of studying a comprehensive React course on Udemy, I finished my first project, [\_Devclock](https://devclock.seanv.dev/), which gave me experience in producing and deploying in vanilla React. Wanting to take my React skills a step further and learn more powerful tools (while also move away from relying on PHP + Wordpress), I set my sights on my next project, a portfolio/blog site made with NextJS!
 
 Quick links:
 
--   [The Github repository for my blog](https://github.com/veritasnz/seanv-site)
--   [Skip to the list of tools & libraries used to make each part of the site](#tooling-index)
+- [The Github repository for my blog](https://github.com/veritasnz/seanv-site)
+- [Skip to the list of tools & libraries used to make each part of the site](#tooling-index)
 
 ## The design phase
 
 Originally, I had a totally different idea of how the site was going to look. I would have a vectorised Japanese ukiyo-e painting serving as the key hero image, and animate all the different features of the painting. The foreground and background would shift with a parallax effect, clouds and boats would drift by, smoke would rise out from the village in the background and so on.
 
 <figure>
-    <img
-        src="/img/posts/en/how-i-made-my-blog/old-design.jpg"
-        alt="A colorful Ukiyo-e painting of Hakone, with a side navigation bar and the title 'Sean Veritas'"
-    />
-    <figcaption>
-        My original site design feat vectorised image of one of Hiroshige's
-        paintings of Hakone. Note the old color scheme for Vincent Van Gogh
-    </figcaption>
+  <img
+    src="/img/posts/en/how-i-made-my-blog/old-design.jpg"
+    alt="A colorful Ukiyo-e painting of Hakone, with a side navigation bar and the title 'Sean Veritas'"
+  />
+  <figcaption>
+    My original site design feat vectorised image of one of Hiroshige's
+    paintings of Hakone. Note the old color scheme for Vincent Van Gogh
+  </figcaption>
 </figure>
 
 While it was a neat idea, and the vector image was already prepared, I knew it would take an age to code, and it might not necessarily turn out the way I wanted.
@@ -80,7 +80,7 @@ I needed something simple, and initially looked into using _Markdown_ files (MD 
 
 The official NextJS team provides a wonderful [demo blog repository](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) that uses Markdown files for the post content. I used this as the main base for my project, and built off of it.
 
- Through Josh Comeau's [blog post](https://www.joshwcomeau.com/blog/how-i-built-my-blog/), I stumbled upon MDX (Markdown with JSX support – allowing articles to have embedded React components). I definitely wanted this functionality in my site. The primary thing I'd be able to use MDX for was to include code snippets with _syntax highlighting_ into my blog posts.
+Through Josh Comeau's [blog post](https://www.joshwcomeau.com/blog/how-i-built-my-blog/), I stumbled upon MDX (Markdown with JSX support – allowing articles to have embedded React components). I definitely wanted this functionality in my site. The primary thing I'd be able to use MDX for was to include code snippets with _syntax highlighting_ into my blog posts.
 
 Once I chose to switch from vanilla Markdown to MDX, I had to update my file parser to support the new `.mdx` files.
 There were a few options for parsers, but I ended up opting for [mdx-bundler](https://github.com/kentcdodds/mdx-bundler). It allows you to parse the MDX file inside `getStaticProps`, and then pass the parsed content to the React component inside your page where it is rendered.
@@ -93,13 +93,14 @@ I do this with my HTML headings, where the default conversion process of my titl
 <h3>My dummy title</h3>
 
 // Instead it gets converted into:
-<h3 id="my-dummy-title" class="o-anchor-heading" >
-    My dummy title
-    <a href="#my-dummy-title">
-        <div class="icon">
-            <svg class="icon__svg">/*...the svg data*/</svg>
-        </div>
-    </a>
+
+<h3 id="my-dummy-title" class="o-anchor-heading">
+  My dummy title
+  <a href="#my-dummy-title">
+    <div class="icon">
+      <svg class="icon__svg">/*...the svg data*/</svg>
+    </div>
+  </a>
 </h3>
 `} />
 
@@ -157,6 +158,7 @@ export default function PostsArchive({ posts }) {
             </ul>
         </div>
     );
+
 }
 
 import { getPostData } from "../lib/posts-api";
@@ -180,7 +182,7 @@ I thought this would be a simple addition, however it created quite the headache
 In my `_app.js` file I wrapped my page **&lt;Component&gt;** with Framer Motion's **&lt;AnimatePresence&gt;** component.
 
 <Code
-    children={`
+  children={`
 <AnimatePresence exitBeforeEnter>
     <Component {...pageProps} key={url} />
 </AnimatePresence>
@@ -210,31 +212,31 @@ But for now, here's what's on the to-do list for the site:
 
 Features :
 
--   RSS feed
--   Code some dummy one-off 'sandbox' pages that show design concepts and art styles
--   Ability to filter works by type (personal vs client)
--   Make the Hero Vincent Van Gogh's eyes follow the user's cursor on hover
--   Get CSS modules working with MDX (hard)
+- RSS feed
+- Code some dummy one-off 'sandbox' pages that show design concepts and art styles
+- Ability to filter works by type (personal vs client)
+- Make the Hero Vincent Van Gogh's eyes follow the user's cursor on hover
+- Get CSS modules working with MDX (hard)
 
 Things I should actually probably get around to :
 
--   Provide smooth-scroll polyfill for Safari users
-    -   Currently for smooth scrolling I'm just using the CSS-based `:root { scroll-behavior: smooth; }`, which is unsupported by Safari.
--   Automatic check if dark mode is preferred by user, and set appropriately
--   Use a tool like Cloudinary to automatically generate blog-post OGP cover-images
--   Create **&lt;InlineLink&gt;** UI component with **_true_** external link checking
-    -   Currently the inline links used inside MDX and my _Works_ items only weakly check if the link is external or not before adding `target="_blank"` and the external-link arrow icon
+- Provide smooth-scroll polyfill for Safari users
+  - Currently for smooth scrolling I'm just using the CSS-based `:root { scroll-behavior: smooth; }`, which is unsupported by Safari.
+- Automatic check if dark mode is preferred by user, and set appropriately
+- Use a tool like Cloudinary to automatically generate blog-post OGP cover-images
+- Create **&lt;InlineLink&gt;** UI component with **_true_** external link checking
+  - Currently the inline links used inside MDX and my _Works_ items only weakly check if the link is external or not before adding `target="_blank"` and the external-link arrow icon
 
 ## Tooling index
 
--   **JS Framework** - NextJS
--   **Hosting** - Vercel
--   **I18n** – [next-translate](https://github.com/vinissimus/next-translate) + default NextJS i18n routing
--   **Page transition animations** – Framer Motion
--   **Articles**
-    -   Written in MDX (parsed & bundled by [mdx-bundler](https://github.com/kentcdodds/mdx-bundler))
-    -   Metadata created with [gray-matter](https://github.com/jonschlinkert/gray-matter)
-    -   Syntax highlighting – [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer)
--   **Email obfuscation** – [react-obfuscate](https://github.com/coston/react-obfuscate)
--   **Typewriter effect** – [TypewriterJS](https://github.com/tameemsafi/typewriterjs#readme)
--   **Placeholder image generation** – [Plaiceholder](https://plaiceholder.co/)
+- **JS Framework** - NextJS
+- **Hosting** - Vercel
+- **I18n** – [next-translate](https://github.com/vinissimus/next-translate) + default NextJS i18n routing
+- **Page transition animations** – Framer Motion
+- **Articles**
+  - Written in MDX (parsed & bundled by [mdx-bundler](https://github.com/kentcdodds/mdx-bundler))
+  - Metadata created with [gray-matter](https://github.com/jonschlinkert/gray-matter)
+  - Syntax highlighting – [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer)
+- **Email obfuscation** – [react-obfuscate](https://github.com/coston/react-obfuscate)
+- **Typewriter effect** – [TypewriterJS](https://github.com/tameemsafi/typewriterjs#readme)
+- **Placeholder image generation** – [Plaiceholder](https://plaiceholder.co/)
