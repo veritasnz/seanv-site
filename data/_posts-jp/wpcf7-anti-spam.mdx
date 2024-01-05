@@ -122,33 +122,3 @@ return $spam;
 
 そんなところですね。日本語で書いた僕の最初の記事！
 質問、問題・添削点などがあれば、ぜひ連絡してくださいね！
-
-{/\*
-A lot of the articles that cover this topic teach the reader how to implement バリデーション and Regex (正規表現) that stops non-Japanese input with Contact Form 7.
-This method stops human users from entering non-Japanese text, however it does not stop bots.
-
-In this article I will show you to how use front-end (wpcf7_validate) as well as back-end (wpcf7_spam) anti-spam measures to protect your blog
-
-In our example, we'll use the contact form's 「your-name」(the default Contact Form 7 「name」) field as our example, and will place restrictions on what characters the user can enter.
-
-### Regex（正規表現）
-
-We will be determining the validity of the name using regex () and the PHP function `preg_match()`.
-This function receives two parameters. Our regex expression and our string.
-
-The regex expression we will be using is `/^[ぁ-んァ-ヶ一-龠々+ー+]+$/u`. This expression determines if the string is comprised of all Japanese characters (including the 「ー」 character).
-
-### バリデーション（フロントエンド）
-
-The first step is the front end. We need to display an error if the user enters an invalid name (one that has no Japanese characters), so that human users can re-enter their Japanese name.
-For this we will use the 「wpcf7_validate」filter and pass it our custom function that will validate the message.
-
-### wpcf7_spam（バックエンド）
-
-Next we need to stop WPCF7 from accepting submissions that have got past our バリデーション対策。
-For this we will use the filter `wpcf7_spam`
-
-Again, we manipulate the filter function so that it can tell WPCF7 if the entered name is spam or not.
-
-If spam equals "true", then the submission will be marked as spam by WPCF7 and an email won't be sent to you and the user.
-\*/}
