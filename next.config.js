@@ -17,7 +17,15 @@ module.exports = withPlaiceholder(
       webpack(config) {
         config.module.rules.push({
           test: /\.svg$/,
-          use: ["@svgr/webpack"],
+          use: [
+            {
+              loader: "@svgr/webpack",
+              options: {
+                // HACK: Stop SVGR from prefixing classnames inside of the SVGs
+                svgoConfig: { plugins: [] },
+              },
+            },
+          ],
         });
 
         return config;
