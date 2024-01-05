@@ -3,17 +3,25 @@ const nextTranslate = require("next-translate");
 const { withPlaiceholder } = require("@plaiceholder/next");
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
-    enabled: process.env.ANALYZE === "true",
+  enabled: process.env.ANALYZE === "true",
 });
 
 module.exports = withPlaiceholder(
-    withBundleAnalyzer(
-        nextTranslate({
-            reactStrictMode: true,
-            i18n: {
-                locales: ["en", "jp"],
-                defaultLocale: "en",
-            },
-        })
-    )
+  withBundleAnalyzer(
+    nextTranslate({
+      reactStrictMode: true,
+      i18n: {
+        locales: ["en", "jp"],
+        defaultLocale: "en",
+      },
+      webpack(config) {
+        config.module.rules.push({
+          test: /\.svg$/,
+          use: ["@svgr/webpack"],
+        });
+
+        return config;
+      },
+    })
+  )
 );

@@ -13,6 +13,7 @@
   "dependencies": {
     "@next/bundle-analyzer": "11.0.1",
     "@plaiceholder/next": "2.1.0",
+    "@svgr/webpack": "^8.1.0",
     "date-fns": "2.22.1",
     "framer-motion": "4.1.17",
     "gray-matter": "4.0.3",
