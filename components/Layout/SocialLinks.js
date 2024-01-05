@@ -7,7 +7,7 @@ export default function SocialLinks(props) {
 
   return (
     <ul {...otherProps}>
-      <li>
+      {/* <li>
         <a
           href="https://www.linkedin.com/in/seanveritas/"
           target="_blank"
@@ -34,7 +34,7 @@ export default function SocialLinks(props) {
             color={color}
           />
         </a>
-      </li>
+      </li> */}
       <li>
         <a
           href="https://github.com/veritasnz"
