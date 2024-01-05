@@ -1,54 +1,54 @@
 {
-    "--- COMMON TEXT ---": "----------------",
+  "--- COMMON TEXT ---": "----------------",
 
-    "home-title": "Home",
-    "posts-read-more": "Read more",
-    "post-more-articles": "More articles",
-    "post-all-articles": "View all",
+  "home-title": "Home",
+  "posts-read-more": "Read more",
+  "post-more-articles": "More articles",
+  "post-all-articles": "View all",
 
-    "post-cat-prefix": "Category: {{count}}",
-    "post-read-duration": "{{count}} minute read",
-    "post-published": "Published <0/>",
-    "post-updated": ", Last updated <0/>",
+  "post-cat-prefix": "Category: {{count}}",
+  "post-read-duration": "{{count}} minute read",
+  "post-published": "Published <0/>",
+  "post-updated": ", Last updated <0/>",
 
-    "footer-image-alt": "A colorful blue and orange illustration of Vincent Van Gogh",
-    "footer-text": "Want to discuss your project?<0/>Here’s how to reach me:",
-    "footer-copy": "Handcrafted by me",
+  "footer-image-alt": "A colorful blue and orange illustration of Vincent Van Gogh",
+  "footer-text": "Want to discuss your project?<0/>Here’s how to reach me:",
+  "footer-copy": "Handcrafted by me",
 
-    "404-title": "404: Page not found",
-    "404-subtitle": "I looked everywhere for it, but the page you were searching for doesn't exist 😣",
-    "404-text": "Please double check the URL, navigate back to the page you were last on, or click the button below to go back to the homepage.",
-    "404-button": "Back to the homepage",
+  "404-title": "404: Page not found",
+  "404-subtitle": "I looked everywhere for it, but the page you were searching for doesn't exist 😣",
+  "404-text": "Please double check the URL, navigate back to the page you were last on, or click the button below to go back to the homepage.",
+  "404-button": "Back to the homepage",
 
-    "--- HOME TEXT ---": "----------------",
+  "--- HOME TEXT ---": "----------------",
 
-    "hero-title": "Hi, I’m Sean!",
-    "hero-alt": "A colorful blue and orange illustration of Vincent Van Gogh",
-    "hero-intro": "I create experiences through the sites and apps I develop. Check out what I’ve been up to through my works and blog posts",
-    "hero-cta": "Got a website or project in mind? Let’s work together!",
-    "hero-contact-button": "Get in touch",
-    "hero-resume-button": "my_resume.pdf",
+  "hero-title": "Hi, I’m Sean!",
+  "hero-alt": "A colorful blue and orange illustration of Vincent Van Gogh",
+  "hero-intro": "I create experiences through the sites and apps I develop. Check out what I’ve been up to through my works and blog posts",
+  "hero-cta": "Got a website or project in mind? Let’s work together!",
+  "hero-contact-button": "Get in touch",
+  "hero-resume-button": "my_resume.pdf",
 
-    "about-title": "More about me",
-    "about-asl": "27/m/kiwi",
-    "about-typewriter-base": "I'm ",
-    "about-typewriter-content": [
-        { "text": "a web developer" },
-        { "text": "into Helvetica" },
-        { "text": "good at making car noises" },
-        { "text": "the worst cook you could imagine" },
-        { "text": "pretty good at making porridge though" },
-        { "text": "thinking of what I should write next" },
-        { "text": "a drinker of tap water" },
-        { "text": "currently addicted to Halo 3" }
-    ],
-    "about-intro": "I’m a kiwi web developer based in Auckland, New Zealand. <0/> After graduating from the University of Auckland with a bachelors degree in computer science, I moved to Japan to teach English. I ended up loving it so much that I decided to stay a bit longer. After attaining business-level Japanese, I began my career as a front end developer there, at a Japanese company. Now I'm back in New Zealand, with numerous personal and client projects under my belt, and looking forward to what’s next!",
+  "about-title": "More about me",
+  "about-asl": "27/m/kiwi",
+  "about-typewriter-base": "I'm ",
+  "about-typewriter-content": [
+    { "text": "a web developer" },
+    { "text": "into Helvetica" },
+    { "text": "good at making car noises" },
+    { "text": "the worst cook you could imagine" },
+    { "text": "pretty good at making porridge though" },
+    { "text": "thinking of what I should write next" },
+    { "text": "a drinker of tap water" },
+    { "text": "currently addicted to Halo 3" }
+  ],
+  "about-intro": "I’m a kiwi web developer based in Auckland, New Zealand. <0/> After graduating from the University of Auckland with a bachelors degree in computer science, I moved to Japan to teach English. I ended up loving it so much that I decided to stay a bit longer. After attaining business-level Japanese, I began my career as a front end developer there, at a Japanese company. Now I'm back in New Zealand, with numerous personal and client projects under my belt, and looking forward to what’s next!",
 
-    "about-use-title": "Tech I use",
-    "about-study-title": "Tech I’m learning",
+  "about-use-title": "Tech I use",
+  "about-study-title": "Tech I’m learning",
 
-    "works-title": "Selected works",
-    "posts-title": "Blog & articles",
+  "works-title": "Selected works",
+  "posts-title": "Blog & articles",
 
-    "view-all": "View All"
+  "view-all": "View All"
 }

@@ -22,51 +22,51 @@ import Personal from "../../../svg/icons/personal.svg";
 import Twitter from "../../../svg/icons/twitter.svg";
 
 export default function Icon(props) {
-    const { name, tooltip, color } = props;
+  const { name, tooltip, color } = props;
 
-    let classProp = "icon__svg";
-    let styleProp = null;
+  let classProp = "icon__svg";
+  let styleProp = null;
 
-    if (color) {
-        classProp += " icon__svg--colored";
-        styleProp = { color: color };
-    }
+  if (color) {
+    classProp += " icon__svg--colored";
+    styleProp = { color: color };
+  }
 
-    const iconProps = {
-        className: classProp,
-        style: styleProp,
-    };
+  const iconProps = {
+    className: classProp,
+    style: styleProp,
+  };
 
-    const icons = {
-        anchor: <Anchor {...iconProps} />,
-        arrowright: <ArrowRight {...iconProps} />,
-        article: <Article {...iconProps} />,
-        code: <Code {...iconProps} />,
-        contact: <Contact {...iconProps} />,
-        chevronup: <ChevronUp {...iconProps} />,
-        english: <English {...iconProps} />,
-        externalarrow: <ExternalArrow {...iconProps} />,
-        filter: <Filter {...iconProps} />,
-        github: <Github {...iconProps} />,
-        japanese: <Japanese {...iconProps} />,
-        linkedin: <LinkedIn {...iconProps} />,
-        loudspeaker: <Loudspeaker {...iconProps} />,
-        nihongo: <Nihongo {...iconProps} />,
-        other: <Other {...iconProps} />,
-        personal: <Personal {...iconProps} />,
-        twitter: <Twitter {...iconProps} />,
-    };
+  const icons = {
+    anchor: <Anchor {...iconProps} />,
+    arrowright: <ArrowRight {...iconProps} />,
+    article: <Article {...iconProps} />,
+    code: <Code {...iconProps} />,
+    contact: <Contact {...iconProps} />,
+    chevronup: <ChevronUp {...iconProps} />,
+    english: <English {...iconProps} />,
+    externalarrow: <ExternalArrow {...iconProps} />,
+    filter: <Filter {...iconProps} />,
+    github: <Github {...iconProps} />,
+    japanese: <Japanese {...iconProps} />,
+    linkedin: <LinkedIn {...iconProps} />,
+    loudspeaker: <Loudspeaker {...iconProps} />,
+    nihongo: <Nihongo {...iconProps} />,
+    other: <Other {...iconProps} />,
+    personal: <Personal {...iconProps} />,
+    twitter: <Twitter {...iconProps} />,
+  };
 
-    const icon = icons[name];
+  const icon = icons[name];
 
-    return (
-        <div className={`icon ${tooltip && "icon--tooltip"}`}>
-            {icon}
-            {tooltip && (
-                <span className="icon__tooltip" role="tooltip">
-                    {tooltip}
-                </span>
-            )}
-        </div>
-    );
+  return (
+    <div className={`icon ${tooltip && "icon--tooltip"}`}>
+      {icon}
+      {tooltip && (
+        <span className="icon__tooltip" role="tooltip">
+          {tooltip}
+        </span>
+      )}
+    </div>
+  );
 }
