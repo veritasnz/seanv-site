@@ -5,33 +5,23 @@ export default function DarkModeButton(props) {
   const [isFirstLoad, setIsFirstLoad] = useState(true);
 
   useEffect(() => {
-    if (isFirstLoad) {
-      // const colorSchemeIsDark = window.matchMedia(
-      //     "(prefers-color-scheme: dark)"
-      // ).matches;
+    if (!isFirstLoad) return;
 
-      const dataJSON = localStorage.getItem("isDarkMode");
-      const data = JSON.parse(dataJSON);
+    const dataJSON = localStorage.getItem("isDarkMode");
+    const data = JSON.parse(dataJSON);
 
-      // if (colorSchemeIsDark || data === true) {
-      if (data === true) {
-        setDarkMode(true);
-      } else {
-        setDarkMode(false);
-      }
-    }
+    setDarkMode(data === true);
 
     setIsFirstLoad(false);
-  }, []);
+  }, [isFirstLoad]);
 
   const setDarkMode = (isDarkMode) => {
     localStorage.setItem("isDarkMode", isDarkMode + "");
 
-    if (isDarkMode) {
-      document.documentElement.setAttribute("data-color-scheme", "dark");
-    } else {
-      document.documentElement.setAttribute("data-color-scheme", "light");
-    }
+    document.documentElement.setAttribute(
+      "data-color-scheme",
+      isDarkMode ? "dark" : "light"
+    );
   };
 
   const darkModeHandler = () => {
