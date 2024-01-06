@@ -1,80 +1,80 @@
 /* Definitions
 ----------------------------------------------- */
 :root {
-    --skin: #f3ffce;
-    --white: #fff;
-    --black: #000;
+  --skin: #f3ffce;
+  --white: #fff;
+  --black: #000;
 
-    // Light
-    --blue-hi-l: #59e9ff;
-    --blue-med-l: #89ced9;
-    --blue-low-l: #1995a8;
-    --blue-bg-l: hsl(187, 100%, 92.5%);
-    --orange-hi-l: #ff985a;
-    --orange-med-l: #ffbf99;
-    --text-title-l: #07505c;
-    --text-subtitle-l: var(--blue-low-l);
-    --text-body-l: #010101;
-    --text-light-l: rgba(1, 1, 1, 0.5);
-    --bg-first-l: #eee;
-    --bg-second-l: #fff;
-    --shadow-l: 1, 1, 1;
-    --shadow-strength-l: 0.15;
+  // Light
+  --blue-hi-l: #59e9ff;
+  --blue-med-l: #89ced9;
+  --blue-low-l: #1995a8;
+  --blue-bg-l: hsl(187, 100%, 92.5%);
+  --orange-hi-l: #ff985a;
+  --orange-med-l: #ffbf99;
+  --text-title-l: #07505c;
+  --text-subtitle-l: var(--blue-low-l);
+  --text-body-l: #010101;
+  --text-light-l: rgba(1, 1, 1, 0.5);
+  --bg-first-l: #eee;
+  --bg-second-l: #fff;
+  --shadow-l: 1, 1, 1;
+  --shadow-strength-l: 0.15;
 
-    // Dark
-    --blue-hi-d: #68b0c0;
-    --blue-med-d: hsl(191, 70%, 45%);
-    --blue-low-d: hsl(191, 65%, 70%);
-    // --blue-med-d: #2abedf;
-    // --blue-low-d: #53b9d0;
-    --blue-bg-d: #000f12;
-    --orange-hi-d: #ff8138;
-    --orange-med-d: #ffa16b;
-    --text-title-d: #8be9fd;
-    --text-subtitle-d: var(--blue-low-d);
-    --text-body-d: #f2f2f2;
-    --text-light-d: rgba(#f2f2f2, 0.6);
-    --bg-first-d: #282a36;
-    --bg-second-d: #383a59;
-    --shadow-d: 0, 0, 0;
-    --shadow-strength-d: 0.2;
+  // Dark
+  --blue-hi-d: #68b0c0;
+  --blue-med-d: hsl(191, 70%, 45%);
+  --blue-low-d: hsl(191, 65%, 70%);
+  // --blue-med-d: #2abedf;
+  // --blue-low-d: #53b9d0;
+  --blue-bg-d: #000f12;
+  --orange-hi-d: #ff8138;
+  --orange-med-d: #ffa16b;
+  --text-title-d: #8be9fd;
+  --text-subtitle-d: var(--blue-low-d);
+  --text-body-d: #f2f2f2;
+  --text-light-d: rgba(#f2f2f2, 0.6);
+  --bg-first-d: #282a36;
+  --bg-second-d: #383a59;
+  --shadow-d: 0, 0, 0;
+  --shadow-strength-d: 0.2;
 }
 
 /* Assignments
 ----------------------------------------------- */
 :root,
 [data-color-scheme="light"] {
-    color-scheme: light;
-    --blue-hi: var(--blue-hi-l);
-    --blue-med: var(--blue-med-l);
-    --blue-low: var(--blue-low-l);
-    --blue-bg: var(--blue-bg-l);
-    --orange-hi: var(--orange-hi-l);
-    --orange-med: var(--orange-med-l);
-    --text-title: var(--text-title-l);
-    --text-subtitle: var(--text-subtitle-l);
-    --text-body: var(--text-body-l);
-    --text-light: var(--text-light-l);
-    --bg-first: var(--bg-first-l);
-    --bg-second: var(--bg-second-l);
-    --shadow: var(--shadow-l);
-    --shadow-strength: var(--shadow-strength-l);
+  color-scheme: light;
+  --blue-hi: var(--blue-hi-l);
+  --blue-med: var(--blue-med-l);
+  --blue-low: var(--blue-low-l);
+  --blue-bg: var(--blue-bg-l);
+  --orange-hi: var(--orange-hi-l);
+  --orange-med: var(--orange-med-l);
+  --text-title: var(--text-title-l);
+  --text-subtitle: var(--text-subtitle-l);
+  --text-body: var(--text-body-l);
+  --text-light: var(--text-light-l);
+  --bg-first: var(--bg-first-l);
+  --bg-second: var(--bg-second-l);
+  --shadow: var(--shadow-l);
+  --shadow-strength: var(--shadow-strength-l);
 }
 
 [data-color-scheme="dark"] {
-    color-scheme: dark;
-    --blue-hi: var(--blue-hi-d);
-    --blue-med: var(--blue-med-d);
-    --blue-low: var(--blue-low-d);
-    --blue-bg: var(--blue-bg-d);
-    --orange-hi: var(--orange-hi-d);
-    --orange-med: var(--orange-med-d);
-    --text-title: var(--text-title-d);
-    --text-subtitle: var(--text-subtitle-d);
-    --text-body: var(--text-body-d);
-    --text-light: var(--text-light-d);
-    --bg-first: var(--bg-first-d);
-    --bg-second: var(--bg-second-d);
-    --shadow: var(--shadow-d);
-    --shadow-strength: var(--shadow-strength-d);
+  color-scheme: dark;
+  --blue-hi: var(--blue-hi-d);
+  --blue-med: var(--blue-med-d);
+  --blue-low: var(--blue-low-d);
+  --blue-bg: var(--blue-bg-d);
+  --orange-hi: var(--orange-hi-d);
+  --orange-med: var(--orange-med-d);
+  --text-title: var(--text-title-d);
+  --text-subtitle: var(--text-subtitle-d);
+  --text-body: var(--text-body-d);
+  --text-light: var(--text-light-d);
+  --bg-first: var(--bg-first-d);
+  --bg-second: var(--bg-second-d);
+  --shadow: var(--shadow-d);
+  --shadow-strength: var(--shadow-strength-d);
 }

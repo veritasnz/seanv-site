@@ -6,4 +6,4 @@ Full article on how I built this site and the tools used can be found [here](htt
 
 ### Note:
 
--   Requires node version v16.9.1
+- Requires node version v16.9.1

@@ -7,16 +7,16 @@ import HamburgerMenu from "./HamburgerMenu";
 import LangButton from "./LangButton";
 
 function Header() {
-    return (
-        <header className="header">
-            <SocialDropdown />
-            <div className="header__options">
-                <LangButton />
-                <DarkModeButton />
-                <HamburgerMenu />
-            </div>
-        </header>
-    );
+  return (
+    <header className="header">
+      <SocialDropdown />
+      <div className="header__options">
+        <LangButton />
+        <DarkModeButton />
+        <HamburgerMenu />
+      </div>
+    </header>
+  );
 }
 
 export default React.memo(Header);
