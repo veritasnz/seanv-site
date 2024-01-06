@@ -1,15 +1,14 @@
 // Images
 //----------------------------------------------- //
 @mixin object-fit-cover {
-    object-fit: cover;
-    font-family: 'object-fit: cover;';
+  object-fit: cover;
+  font-family: "object-fit: cover;";
 }
 
 @mixin object-fit-contain {
-    object-fit: contain;
-    font-family: 'object-fit: contain;';
+  object-fit: contain;
+  font-family: "object-fit: contain;";
 }
-
 
 // Graphics
 //----------------------------------------------- //
@@ -18,78 +17,79 @@
 // Default color is '$c-black', start opacity is `1`
 // Usage: background-image: linear-gradient(to bottom, clothoid-gradient($c-white, 1));
 @function clothoid-gradient($color: var(--shadow), $opacity: 1) {
-    $clothoid: (
-        1: 0%,
-        0.3: 50%,
-        0.15: 65%,
-        0.075: 75.5%,
-        0.037: 82.85%,
-        0.019: 88%,
-        0: 100%
+  $clothoid: (
+    1: 0%,
+    0.3: 50%,
+    0.15: 65%,
+    0.075: 75.5%,
+    0.037: 82.85%,
+    0.019: 88%,
+    0: 100%,
+  );
+
+  @if type-of($color) != color {
+    @return null;
+  }
+
+  $rgba: "#{red($color)},#{green($color)},#{blue($color)}";
+  $color-stops: ();
+
+  @each $key, $value in $clothoid {
+    $color-stops: append(
+      $color-stops,
+      unquote("rgba(#{$rgba}, #{$key * $opacity}) #{$value}"),
+      "comma"
     );
-
-    @if type-of($color) != color {
-        @return null;
-    }
-
-    $rgba: '#{red($color)},#{green($color)},#{blue($color)}';
-    $color-stops: ();
-
-    @each $key, $value in $clothoid {
-        $color-stops: append($color-stops, unquote('rgba(#{$rgba}, #{$key * $opacity}) #{$value}'), 'comma');
-    }
-    @return $color-stops;
+  }
+  @return $color-stops;
 }
-
 
 // Animations
 //----------------------------------------------- //
 @mixin shift-on-hover-x($offset: $shift-default-offset) {
-    transition: transform $transition-default;
+  transition: transform $transition-default;
 
-    &:hover {
-        transform: translateX($offset);
-    }
+  &:hover {
+    transform: translateX($offset);
+  }
 }
 
 @mixin shift-on-hover-y($offset: -#{$shift-default-offset}) {
-    transition: transform $transition-default;
+  transition: transform $transition-default;
 
-    &:hover {
-        transform: translateY($offset);
-    }
+  &:hover {
+    transform: translateY($offset);
+  }
 }
-
 
 // Selectors
 //----------------------------------------------- //
-@mixin more-than-n-els ($n: '4', $this: '*') {
-    //css-tricks.com/extremely-handy-nth-child-recipes-sass-mixins/
-    &:nth-last-child(#{$n}n + 4) {
-        :first-child,
-        :first-child ~ #{$this} {
-            @content;
-        }
+@mixin more-than-n-els($n: "4", $this: "*") {
+  //css-tricks.com/extremely-handy-nth-child-recipes-sass-mixins/
+  &:nth-last-child(#{$n}n + 4) {
+    :first-child,
+    :first-child ~ #{$this} {
+      @content;
     }
+  }
 }
 
-@mixin last-n-els ($count: '4') {
-    &:nth-last-child(-n + #{$count}) {
-        @content;
-    }
+@mixin last-n-els($count: "4") {
+  &:nth-last-child(-n + #{$count}) {
+    @content;
+  }
 }
-
 
 // Misc
 //----------------------------------------------- //
-@mixin fontawesome ($fontweight: 900) {
-    display: inline-block;
-    font-weight: $fontweight;
-    font-family: $ff-fontawesome;
-    -moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes
-    -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
+@mixin fontawesome($fontweight: 900) {
+  display: inline-block;
+  font-weight: $fontweight;
+  font-family: $ff-fontawesome;
+  -moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes
+  -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
 }

@@ -8,71 +8,71 @@ $breakpoint-l: 1400px;
 $breakpoint-xl: 1600px;
 
 :root {
-    /*
+  /*
     * Other
     */
-    // Z-indexes
-    --z-footer: 0;
-    --z-main: 100;
-    --z-tooltip: 500;
-    --z-header: 1000;
+  // Z-indexes
+  --z-footer: 0;
+  --z-main: 100;
+  --z-tooltip: 500;
+  --z-header: 1000;
 
-    // Padding
-    --edge-padding: 2.6rem;
+  // Padding
+  --edge-padding: 2.6rem;
 
-    // Content Widths
-    --mw-hero: 89rem;
-    --mw-prose: calc(80ch + (var(--edge-padding) * 2));
-    --mw-content: calc(102rem + (var(--edge-padding) * 2));
+  // Content Widths
+  --mw-hero: 89rem;
+  --mw-prose: calc(80ch + (var(--edge-padding) * 2));
+  --mw-content: calc(102rem + (var(--edge-padding) * 2));
 
-    /*
+  /*
     * Text
     */
-    // Font family can be found in the fonts folder
-    --ff-mono: "Anonymous Pro", "DotGothic16", monospace;
+  // Font family can be found in the fonts folder
+  --ff-mono: "Anonymous Pro", "DotGothic16", monospace;
 
-    // Font Weights
-    --fw-regular: normal;
-    --fw-bold: bold;
+  // Font Weights
+  --fw-regular: normal;
+  --fw-bold: bold;
 
-    // Font Sizes
-    --fs-tooltip: 1rem;
-    --fs-tiny: 1.2rem;
-    --fs-small: 1.4rem;
-    --fs-body: 1.6rem;
-    --fs-large: 1.8rem;
-    --fs-larger: 2rem;
-    --fs-minititle: 2.2rem;
-    --fs-subtitle: 2.4rem;
-    --fs-title: 3.2rem;
-    --fs-page-title: 3.8rem;
+  // Font Sizes
+  --fs-tooltip: 1rem;
+  --fs-tiny: 1.2rem;
+  --fs-small: 1.4rem;
+  --fs-body: 1.6rem;
+  --fs-large: 1.8rem;
+  --fs-larger: 2rem;
+  --fs-minititle: 2.2rem;
+  --fs-subtitle: 2.4rem;
+  --fs-title: 3.2rem;
+  --fs-page-title: 3.8rem;
 
-    // Other
-    --lh-body: 1.6;
-    --lh-title: 1.2;
+  // Other
+  --lh-body: 1.6;
+  --lh-title: 1.2;
 
-    /*
+  /*
     * Graphics
     */
-    --hill-width: 4.2rem;
+  --hill-width: 4.2rem;
 
-    @media (min-width: $breakpoint-m) {
-        //Other
-        --edge-padding: 5rem;
-        // Text
-        --fs-tooltip: 1.2rem;
-        --fs-tiny: 1.4rem;
-        --fs-small: 1.6rem;
-        --fs-body: 1.8rem;
-        --fs-large: 2rem;
-        --fs-larger: 2.2rem;
-        --fs-minititle: 2.7rem;
-        --fs-subtitle: 3.2rem;
-        --fs-title: 4.2rem;
-        --fs-page-title: 6.2rem;
-    }
+  @media (min-width: $breakpoint-m) {
+    //Other
+    --edge-padding: 5rem;
+    // Text
+    --fs-tooltip: 1.2rem;
+    --fs-tiny: 1.4rem;
+    --fs-small: 1.6rem;
+    --fs-body: 1.8rem;
+    --fs-large: 2rem;
+    --fs-larger: 2.2rem;
+    --fs-minititle: 2.7rem;
+    --fs-subtitle: 3.2rem;
+    --fs-title: 4.2rem;
+    --fs-page-title: 6.2rem;
+  }
 
-    @media (min-width: $breakpoint-l) {
-        --hill-width: 5rem;
-    }
+  @media (min-width: $breakpoint-l) {
+    --hill-width: 5rem;
+  }
 }
